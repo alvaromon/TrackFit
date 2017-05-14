@@ -4,7 +4,7 @@
         Title="TrackFit" Height="453.635" Width="855.207">
     <Grid>
         <TabControl HorizontalAlignment="Left" Height="403" Margin="10,10,0,0" VerticalAlignment="Top" Width="827">
-            <TabItem Header="Exercise">
+            <TabItem Header="LouTab">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
             <TabItem Header="Nutrition">
