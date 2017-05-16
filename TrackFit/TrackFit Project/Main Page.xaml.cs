@@ -16,20 +16,19 @@ using System.Windows.Shapes;
 namespace TrackFit_Project
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Main_Page.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main_Page : Page
     {
-        public MainWindow()
+        public Main_Page()
         {
             InitializeComponent();
         }
 
-        public Frame getFrame()
+        private void profileButtonClick(object sender, RoutedEventArgs e)
         {
-            return Main_Window_Frame;
+            Window mainWindow = Application.Current.MainWindow;
+            mainWindow.Content = new Profile_Page();
         }
-
-
     }
 }

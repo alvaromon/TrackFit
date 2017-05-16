@@ -24,3 +24,8 @@ C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Tr
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.csproj.GenerateResource.Cache
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.exe
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.pdb
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Profile Page.g.cs
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project_MarkupCompile.lref
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Profile Page.baml
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Main Page.g.cs
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Main Page.baml
