@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Release\
 TrackFit_Project
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\App.xaml
 3-1790643328
 
@@ -16,5 +16,5 @@ C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\App.xaml
 12-1401562060
 Main Page.xaml;MainWindow.xaml;Profile Page.xaml;
 
-False
+True
 
