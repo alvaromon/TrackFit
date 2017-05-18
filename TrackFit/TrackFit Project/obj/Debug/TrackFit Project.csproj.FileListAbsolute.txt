@@ -29,3 +29,5 @@ C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Tr
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Profile Page.baml
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Main Page.g.cs
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Main Page.baml
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Login Page.g.cs
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Login Page.baml
