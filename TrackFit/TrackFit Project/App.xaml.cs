@@ -13,5 +13,20 @@ namespace TrackFit_Project
     /// </summary>
     public partial class App : Application
     {
+        #region Variables
+
+        private UserProfile user;
+
+        #endregion
+
+        #region Properties
+
+        public UserProfile User { get; set; }
+
+        #endregion
+
+
+
+
     }
 }

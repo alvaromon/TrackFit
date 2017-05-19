@@ -1,0 +1,23 @@
+<User name = "Alvaro Montoya">
+  <FirstName>
+    Alvaro
+  </FirstName>
+  <LastName>
+    Montoya
+  </LastName>
+  <HeightInches>
+    70
+  </HeightInches>
+  <Age>
+    26
+  </Age>
+  <Weight>
+    180
+  </Weight>
+  <Username>
+    alvaromon
+  </Username>
+  <Password>
+    Oneshot1!
+  </Password>
+</User>
