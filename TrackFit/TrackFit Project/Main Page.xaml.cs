@@ -30,5 +30,14 @@ namespace TrackFit_Project
             Window mainWindow = Application.Current.MainWindow;
             mainWindow.Content = new Profile_Page();
         }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            App myApp = (App)Application.Current;
+            myApp.User = null;
+
+            Window mainWindow = Application.Current.MainWindow;
+            mainWindow.Content = new Login_Page();
+        }
     }
 }

@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Xml;
-using static TrackFit_Project.MainWindow;
+//using static TrackFit_Project.MainWindow;
 
 namespace TrackFit_Project
 {
@@ -29,7 +29,7 @@ namespace TrackFit_Project
         }
 
         /// <summary>
-        /// This will verify the username and password entered.
+        /// This event will verify the username and password entered.
         /// </summary>
         /// <param name="sender">Login_Button obj</param>
         /// <param name="e">?notsure?</param>
@@ -43,9 +43,8 @@ namespace TrackFit_Project
             profileDoc.Load(path);
             String userPassword = profileDoc.SelectSingleNode("User/Password").InnerText.Trim();
 
-            if ( Password_Text_Box.Text == userPassword)
+            if ( Password_Text_Box.Password == userPassword)
             {
-                //Need to create a user profile obj that is available everywhere
                 App myApp = (App) Application.Current;
                 myApp.User = new UserProfile(path);
 

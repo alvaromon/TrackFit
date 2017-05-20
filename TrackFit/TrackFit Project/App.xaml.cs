@@ -16,12 +16,14 @@ namespace TrackFit_Project
         #region Variables
 
         private UserProfile user;
+        private ExercisePlan exercisePlan;
 
         #endregion
 
         #region Properties
 
         public UserProfile User { get; set; }
+        public ExercisePlan Plan { get; set; }
 
         #endregion
 
