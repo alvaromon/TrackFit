@@ -37,20 +37,39 @@ namespace TrackFit_Project
         {
 
             XmlDocument profileDoc = new XmlDocument();
+            String userPassword = "";
+            String path = System.IO.Path.Combine(Environment.CurrentDirectory, $@"User Profiles\{Username_Text_Box.Text}.xml");
 
-            String path = System.IO.Path.Combine( Environment.CurrentDirectory, $@"User Profiles\{Username_Text_Box.Text}.xml");
-
-            profileDoc.Load(path);
-            String userPassword = profileDoc.SelectSingleNode("User/Password").InnerText.Trim();
-
-            if ( Password_Text_Box.Password == userPassword)
+            try
             {
-                App myApp = (App) Application.Current;
+                profileDoc.Load(path);
+                userPassword = profileDoc.SelectSingleNode("User/Password").InnerText.Trim();
+            }
+            catch (Exception)
+            {
+                showLoginError();
+                return;
+            }
+
+            if ( Password_Text_Box.Password == userPassword )
+            {
+                App myApp = (App)Application.Current;
                 myApp.User = new UserProfile(path);
 
                 Window mainWindow = Application.Current.MainWindow;
                 mainWindow.Content = new Main_Page();
             }
+            else
+            {
+                showLoginError();
+            }
+        }
+
+        public void showLoginError()
+        {
+            Login_Error.Visibility = Visibility.Visible;
+            Username_Text_Box.Clear();
+            Password_Text_Box.Clear();
         }
     }
 }

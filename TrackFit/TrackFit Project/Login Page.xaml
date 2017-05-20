@@ -17,5 +17,6 @@
         <Button x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Margin="361,250,0,0" VerticalAlignment="Top" Width="86" Click="Login_Button_Click"/>
         <TextBlock x:Name="Banner" HorizontalAlignment="Left" Margin="338,64,0,0" TextWrapping="Wrap" Text="TrackFit" VerticalAlignment="Top" Width="137" Height="66" FontSize="36" FontWeight="Bold"/>
         <Button x:Name="Create_Account_Button" Content="Create Account" HorizontalAlignment="Left" Margin="361,275,0,0" VerticalAlignment="Top" Width="86"/>
+        <TextBlock x:Name="Login_Error" HorizontalAlignment="Left" Margin="338,157,0,0" TextWrapping="Wrap" Text="The Username or Password did not match. please try again!" VerticalAlignment="Top" Width="189" Foreground="Red" Visibility="Hidden"/>
     </Grid>
 </Page>
