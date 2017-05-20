@@ -53,6 +53,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Exercise.cs" />
+    <Compile Include="ExercisePlan.cs" />
     <Compile Include="UserProfile.cs" />
     <Page Include="Login Page.xaml">
       <SubType>Designer</SubType>
@@ -118,9 +120,7 @@
   <ItemGroup>
     <Resource Include="stock profile image.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="User Profiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

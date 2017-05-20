@@ -1,4 +1,19 @@
 <User name = "Alvaro Montoya">
+  <Plan>
+    False
+  </Plan>
+  <Username>
+    alvaromon
+  </Username>
+  <Password>
+    Oneshot1!
+  </Password>
+  <ExerciseGoal>
+    1
+  </ExerciseGoal>
+  <ExerciseLevel>
+    1
+  </ExerciseLevel>
   <FirstName>
     Alvaro
   </FirstName>
@@ -14,10 +29,4 @@
   <Weight>
     180
   </Weight>
-  <Username>
-    alvaromon
-  </Username>
-  <Password>
-    Oneshot1!
-  </Password>
 </User>
