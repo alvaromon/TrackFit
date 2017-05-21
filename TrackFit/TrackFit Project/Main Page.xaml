@@ -18,6 +18,13 @@
                             <Image.Source>stock profile image.png</Image.Source>
                         </Image>
                     </Button>
+                    <Rectangle x:Name="Exercise_tab_rectangle" Fill="#FFCFC6C6" HorizontalAlignment="Left" Height="295" Margin="137,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="625"/>
+                    <TextBlock HorizontalAlignment="Left" Height="234" Margin="169,87,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="548"/>
+                    <Button x:Name="Exercise_tab_left_button" Content="&lt;" Margin="148,189,652,154" FontSize="18" FontWeight="Bold"/>
+                    <Button x:Name="Exercise_tab_Right_button" Content="&gt;" Margin="717,189,83,154" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock x:Name="Log_Out_Text_Block" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
+                        <Hyperlink Click="Hyperlink_Click">Log out</Hyperlink>
+                    </TextBlock>
                 </Grid>
             </TabItem>
             <TabItem Header="Nutrition">
@@ -27,6 +34,10 @@
                             <Image.Source>stock profile image.png</Image.Source>
                         </Image>
                     </Button>
+                    <Rectangle x:Name="Nutrition_tab_rectangle" Fill="#FFCFC6C6" HorizontalAlignment="Left" Height="295" Margin="137,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="625"/>
+                    <TextBlock HorizontalAlignment="Left" Height="234" Margin="169,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="548"><Run Text="TextB"/><Run Text="lock"/></TextBlock>
+                    <Button x:Name="Nutriton_tab_left_button" Content="&lt;" Margin="148,189,652,154" FontSize="18" FontWeight="Bold"/>
+                    <Button x:Name="Nutrition_tab_Right_button" Content="&gt;" Margin="717,189,83,154" FontSize="18" FontWeight="Bold"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Statistics">
@@ -36,6 +47,10 @@
                             <Image.Source>stock profile image.png</Image.Source>
                         </Image>
                     </Button>
+                    <Rectangle x:Name="Statistics_tab_rectangle" Fill="#FFCFC6C6" HorizontalAlignment="Left" Height="295" Margin="137,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="625"/>
+                    <TextBlock HorizontalAlignment="Left" Height="234" Margin="169,87,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="548"/>
+                    <Button x:Name="Statistics_tab_left_button" Content="&lt;" Margin="148,189,652,154" FontSize="18" FontWeight="Bold"/>
+                    <Button x:Name="Statistics_tab_Right_button" Content="&gt;" Margin="717,189,83,154" FontSize="18" FontWeight="Bold"/>
                 </Grid>
             </TabItem>
         </TabControl>

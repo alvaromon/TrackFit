@@ -14,7 +14,6 @@ C:\Users\alvaro\Documents\Visual Studio 2013\Projects\TrackFit\TrackFit Project\
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\TrackFit Project.exe.config
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\TrackFit Project.exe
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\TrackFit Project.pdb
-C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.csprojResolveAssemblyReference.cache
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\MainWindow.baml
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\MainWindow.g.cs
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\App.g.cs
@@ -29,3 +28,6 @@ C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Tr
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Profile Page.baml
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Main Page.g.cs
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Main Page.baml
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Login Page.g.cs
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Login Page.baml
+C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.csprojResolveAssemblyReference.cache
