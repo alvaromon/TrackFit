@@ -17,7 +17,7 @@ namespace TrackFit_Project
         /// </summary>
         public Exercise[][] _exercises = new Exercise[7][];
         public const String _path = @"C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\Exercises.xml";
-        // public UserProfile _user = 
+        public UserProfile _user = ApplicationServices.User;
 
         #endregion
 
@@ -37,7 +37,7 @@ namespace TrackFit_Project
 
         public void buildPlan()
         {
-           // if ()
+            //if (  ) {  }
         }
 
         #endregion

@@ -23,7 +23,7 @@
                     <Button x:Name="Exercise_tab_left_button" Content="&lt;" Margin="148,189,652,154" FontSize="18" FontWeight="Bold"/>
                     <Button x:Name="Exercise_tab_Right_button" Content="&gt;" Margin="717,189,83,154" FontSize="18" FontWeight="Bold"/>
                     <TextBlock x:Name="Log_Out_Text_Block" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
-                        <Hyperlink Click="Hyperlink_Click">Log out</Hyperlink>
+                        <Hyperlink x:Name="Log_out_hyperlink" Click="Log_out_hyperlink_Click">Log out</Hyperlink>
                     </TextBlock>
                 </Grid>
             </TabItem>
