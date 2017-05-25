@@ -1,0 +1,32 @@
+<User name = "Louis King">
+  <Plan>
+    False
+  </Plan>
+  <Username>
+    lking
+  </Username>
+  <Password>
+    Pop44Mom
+  </Password>
+  <ExerciseGoal>
+    1
+  </ExerciseGoal>
+  <ExerciseLevel>
+    1
+  </ExerciseLevel>
+  <FirstName>
+    Louis
+  </FirstName>
+  <LastName>
+    King
+  </LastName>
+  <HeightInches>
+    72
+  </HeightInches>
+  <Age>
+    26
+  </Age>
+  <Weight>
+    180
+  </Weight>
+</User>
