@@ -19,8 +19,8 @@ namespace TrackFit_Project
     {
         #region Member Variables
 
-        private String _lastName;
         private String _firstName;
+        private String _lastName;
         private int _age;
         private DateTime _birthday;
         private double _height;
@@ -59,8 +59,34 @@ namespace TrackFit_Project
 
         #region Properties
 
-        public String FirstName{ get; set; }
-        public String LastName { get; set; }
+        /// <summary>
+        /// Property used to get or set the userss first name
+        /// </summary>
+        public string FirstName
+        {
+            get
+            {
+                return _firstName;
+            }
+
+            set
+            {
+                _firstName = value;
+            }
+        }
+        public string LastName
+        {
+            get
+            {
+                return _lastName;
+            }
+
+            set
+            {
+                _lastName = value;
+            }
+        }
+
         public int Age { get; set; }
         public double Height { get; set;  }
         public double Weight { get; set; }

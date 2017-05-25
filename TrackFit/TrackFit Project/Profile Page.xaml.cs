@@ -30,5 +30,6 @@ namespace TrackFit_Project
             Window mainWindow = Application.Current.MainWindow;
             mainWindow.Content = new Main_Page();
         }
+
     }
 }

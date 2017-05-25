@@ -53,8 +53,9 @@ namespace TrackFit_Project
 
             if ( Password_Text_Box.Password == userPassword )
             {
-                App myApp = (App)Application.Current;
-                myApp.User = new UserProfile(path);
+                ApplicationServices.User = new UserProfile(path);
+
+                System.Windows.MessageBox.Show(ApplicationServices.User.FirstName );
 
                 Window mainWindow = Application.Current.MainWindow;
                 mainWindow.Content = new Main_Page();
