@@ -55,8 +55,6 @@ namespace TrackFit_Project
             {
                 ApplicationServices.User = new UserProfile(path);
 
-                System.Windows.MessageBox.Show(ApplicationServices.User.FirstName );
-
                 Window mainWindow = Application.Current.MainWindow;
                 mainWindow.Content = new Main_Page();
             }
