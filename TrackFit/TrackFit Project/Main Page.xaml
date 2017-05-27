@@ -9,9 +9,15 @@
       Title="Main_Page"
       ShowsNavigationUI = "false" >
 
-    <Grid>
+    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> 
+      
         <TabControl HorizontalAlignment="Left" Height="403" Margin="10,10,0,0" VerticalAlignment="Top" Width="827">
-            <TabItem Header="Exercise">
+            <TabItem Header="Exercise"
+               HorizontalAlignment="Left"
+               Width="58"
+               Height="22"
+               Margin="-2,-2,0,0"
+               VerticalAlignment="Top">
                 <Grid Background="#FFE5E5E5">
                     <Button x:Name="Exercise_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
                         <Image>
@@ -54,5 +60,5 @@
                 </Grid>
             </TabItem>
         </TabControl>
-    </Grid>
+    </StackPanel>
 </Page>
