@@ -31,3 +31,23 @@ C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Ma
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Login Page.g.cs
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Login Page.baml
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.csprojResolveAssemblyReference.cache
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\TrackFit Project.exe.config
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\TrackFit Project.exe
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\TrackFit Project.pdb
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.csprojResolveAssemblyReference.cache
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\MainWindow.baml
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Login Page.g.cs
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Main Page.g.cs
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\MainWindow.g.cs
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Profile Page.g.cs
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\App.g.cs
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project_MarkupCompile.cache
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project_MarkupCompile.lref
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Login Page.baml
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Main Page.baml
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Profile Page.baml
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.g.resources
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit_Project.Properties.Resources.resources
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.csproj.GenerateResource.Cache
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.exe
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.pdb

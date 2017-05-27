@@ -12,5 +12,9 @@
     <Grid>
         <Button Content="Exit Profile Settings" HorizontalAlignment="Left" Margin="22,24,0,0" VerticalAlignment="Top" Width="124" Click="exitProfilePage">
         </Button>
-    </Grid>
+    <StackPanel HorizontalAlignment="Stretch"
+                
+                VerticalAlignment="Stretch"
+                />
+  </Grid>
 </Page>
