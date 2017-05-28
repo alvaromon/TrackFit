@@ -9,6 +9,8 @@
     <Workout name = "Tricep Curls" target = "upperbody" status = "accepted" />
     <Workout name = "Bicep Curls" target = "upperbody" status = "accepted" />
     <Workout name = "Push Ups" target = "upperbody" status = "accepted" />
+    <Workout name = "Sit Ups" target = "core" status = "accepted" />
+    <Workout name = "Crunches" target = "core" status = "accepted" />
 
   </Beginner>
   <Intermediate>
