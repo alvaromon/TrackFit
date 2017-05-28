@@ -44,6 +44,9 @@
                     <TextBlock HorizontalAlignment="Left" Height="234" Margin="169,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="548"><Run Text="TextB"/><Run Text="lock"/></TextBlock>
                     <Button x:Name="Nutriton_tab_left_button" Content="&lt;" Margin="148,189,652,154" FontSize="18" FontWeight="Bold"/>
                     <Button x:Name="Nutrition_tab_Right_button" Content="&gt;" Margin="717,189,83,154" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock x:Name="Log_Out_Text_Block_Nutrition" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
+                        <Hyperlink x:Name="Log_out_hyperlink_Nutrition" Click="Log_out_hyperlink_Click">Log out</Hyperlink>
+                    </TextBlock>
                 </Grid>
             </TabItem>
             <TabItem Header="Statistics">
@@ -57,6 +60,9 @@
                     <TextBlock HorizontalAlignment="Left" Height="234" Margin="169,87,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="548"/>
                     <Button x:Name="Statistics_tab_left_button" Content="&lt;" Margin="148,189,652,154" FontSize="18" FontWeight="Bold"/>
                     <Button x:Name="Statistics_tab_Right_button" Content="&gt;" Margin="717,189,83,154" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock x:Name="Log_Out_Text_Block_Statistics" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
+                        <Hyperlink x:Name="Log_out_hyperlink_Statistics" Click="Log_out_hyperlink_Click">Log out</Hyperlink>
+                    </TextBlock>
                 </Grid>
             </TabItem>
         </TabControl>
