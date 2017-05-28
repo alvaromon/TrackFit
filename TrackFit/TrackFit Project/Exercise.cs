@@ -14,7 +14,7 @@ namespace TrackFit_Project
         private String _path;
         private XmlDocument _xmlFile;
         private String _difficulty;
-        private String _targetMuscles;
+        private String _target;
         private String _name;
         private String _status;
 
@@ -46,7 +46,7 @@ namespace TrackFit_Project
 
         public String Name { get; set; }
         public String Difficulty { get; set; }
-        public String TargetMuscles { get; set;  }
+        public String Target { get; set;  }
         public String Status { get; set; }
 
         #endregion

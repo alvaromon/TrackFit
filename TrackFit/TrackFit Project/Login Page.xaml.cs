@@ -23,6 +23,7 @@ namespace TrackFit_Project
     /// </summary>
     public partial class Login_Page : Page
     {
+
         public Login_Page()
         {
             InitializeComponent();
