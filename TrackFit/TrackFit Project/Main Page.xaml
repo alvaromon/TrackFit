@@ -9,62 +9,65 @@
       Title="Main_Page"
       ShowsNavigationUI = "false" >
 
-    <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> 
-      
-        <TabControl HorizontalAlignment="Left" Height="403" Margin="10,10,0,0" VerticalAlignment="Top" Width="827">
-            <TabItem Header="Exercise"
+    <TabControl Margin="10,10,10.333,10.333">
+        <TabItem Header="Exercise"
                HorizontalAlignment="Left"
                Width="58"
                Height="22"
                Margin="-2,-2,0,0"
                VerticalAlignment="Top">
-                <Grid Background="#FFE5E5E5">
-                    <Button x:Name="Exercise_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
-                        <Image>
-                            <Image.Source>stock profile image.png</Image.Source>
-                        </Image>
-                    </Button>
-                    <Rectangle x:Name="Exercise_tab_rectangle" Fill="#FFCFC6C6" HorizontalAlignment="Left" Height="295" Margin="137,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="625"/>
-                    <TextBlock HorizontalAlignment="Left" Height="234" Margin="169,87,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="548"/>
-                    <Button x:Name="Exercise_tab_left_button" Content="&lt;" Margin="148,189,652,154" FontSize="18" FontWeight="Bold"/>
-                    <Button x:Name="Exercise_tab_Right_button" Content="&gt;" Margin="717,189,83,154" FontSize="18" FontWeight="Bold"/>
-                    <TextBlock x:Name="Log_Out_Text_Block" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
+            <Grid Background="#FFE5E5E5">
+                <Button x:Name="Exercise_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
+                    <Image>
+                        <Image.Source>stock profile image.png</Image.Source>
+                    </Image>
+                </Button>
+                <Grid Margin="137,50,10,10">
+                    <Rectangle x:Name="Exercise_tab_rectangle" Fill="#FFCFC6C6" Stroke="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    <TextBlock HorizontalAlignment="Stretch" Height="234" Margin="32,37" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Stretch" />
+                    <Button x:Name="Exercise_tab_left_button" Content="&lt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
+                    <Button x:Name="Exercise_tab_Right_button" Content="&gt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Right" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
+                </Grid>
+                <TextBlock x:Name="Log_Out_Text_Block" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
                         <Hyperlink x:Name="Log_out_hyperlink" Click="Log_out_hyperlink_Click">Log out</Hyperlink>
-                    </TextBlock>
+                </TextBlock>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Nutrition">
+            <Grid Background="#FFE5E5E5">
+                <Button x:Name="Nutrition_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
+                    <Image>
+                        <Image.Source>stock profile image.png</Image.Source>
+                    </Image>
+                </Button>
+                <Grid Margin="137,50,10,10">
+                    <Rectangle x:Name="Nutrition_tab_rectangle" Fill="#FFCFC6C6" Stroke="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    <TextBlock HorizontalAlignment="Stretch" Height="234" Margin="32,37" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Stretch" />
+                    <Button x:Name="Nutrition_tab_left_button" Content="&lt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
+                    <Button x:Name="Nutrition_tab_Right_button" Content="&gt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Right" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
                 </Grid>
-            </TabItem>
-            <TabItem Header="Nutrition">
-                <Grid Background="#FFE5E5E5">
-                    <Button x:Name="Nutrition_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
-                        <Image>
-                            <Image.Source>stock profile image.png</Image.Source>
-                        </Image>
-                    </Button>
-                    <Rectangle x:Name="Nutrition_tab_rectangle" Fill="#FFCFC6C6" HorizontalAlignment="Left" Height="295" Margin="137,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="625"/>
-                    <TextBlock HorizontalAlignment="Left" Height="234" Margin="169,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="548"><Run Text="TextB"/><Run Text="lock"/></TextBlock>
-                    <Button x:Name="Nutriton_tab_left_button" Content="&lt;" Margin="148,189,652,154" FontSize="18" FontWeight="Bold"/>
-                    <Button x:Name="Nutrition_tab_Right_button" Content="&gt;" Margin="717,189,83,154" FontSize="18" FontWeight="Bold"/>
-                    <TextBlock x:Name="Log_Out_Text_Block_Nutrition" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
+                <TextBlock x:Name="Log_Out_Text_Block_Nutrition" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
                         <Hyperlink x:Name="Log_out_hyperlink_Nutrition" Click="Log_out_hyperlink_Click">Log out</Hyperlink>
-                    </TextBlock>
+                </TextBlock>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Statistics">
+            <Grid Background="#FFE5E5E5">
+                <Button x:Name="Statistics_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
+                    <Image>
+                        <Image.Source>stock profile image.png</Image.Source>
+                    </Image>
+                </Button>
+                <Grid Margin="137,50,10,10">
+                    <Rectangle x:Name="Statistics_tab_rectangle" Fill="#FFCFC6C6" Stroke="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    <TextBlock HorizontalAlignment="Stretch" Height="234" Margin="32,37" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Stretch" />
+                    <Button x:Name="Statistics_tab_left_button" Content="&lt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
+                    <Button x:Name="Statistics_tab_Right_button" Content="&gt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Right" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
                 </Grid>
-            </TabItem>
-            <TabItem Header="Statistics">
-                <Grid Background="#FFE5E5E5">
-                    <Button x:Name="Statistics_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
-                        <Image>
-                            <Image.Source>stock profile image.png</Image.Source>
-                        </Image>
-                    </Button>
-                    <Rectangle x:Name="Statistics_tab_rectangle" Fill="#FFCFC6C6" HorizontalAlignment="Left" Height="295" Margin="137,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="625"/>
-                    <TextBlock HorizontalAlignment="Left" Height="234" Margin="169,87,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="548"/>
-                    <Button x:Name="Statistics_tab_left_button" Content="&lt;" Margin="148,189,652,154" FontSize="18" FontWeight="Bold"/>
-                    <Button x:Name="Statistics_tab_Right_button" Content="&gt;" Margin="717,189,83,154" FontSize="18" FontWeight="Bold"/>
-                    <TextBlock x:Name="Log_Out_Text_Block_Statistics" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
+                <TextBlock x:Name="Log_Out_Text_Block_Statistics" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
                         <Hyperlink x:Name="Log_out_hyperlink_Statistics" Click="Log_out_hyperlink_Click">Log out</Hyperlink>
-                    </TextBlock>
-                </Grid>
-            </TabItem>
-        </TabControl>
-    </StackPanel>
+                </TextBlock>
+            </Grid>
+        </TabItem>
+    </TabControl>
 </Page>
