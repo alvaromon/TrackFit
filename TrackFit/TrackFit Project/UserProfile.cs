@@ -8,10 +8,10 @@ using System.Xml;
 namespace TrackFit_Project
 {
 
-    #region
+    #region Enums
 
     public enum ExerciseLevel { Beginner, Intermediate, Expert };
-    public enum ExerciseGoal { Tone, Weight_Loss, Strength_Gain, Maintainance }
+    public enum ExerciseGoal { Tone, Weight_Loss, Strength }
 
     #endregion
 

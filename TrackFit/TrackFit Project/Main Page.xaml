@@ -53,12 +53,17 @@
         </TabItem>
         <TabItem Header="Statistics">
             <Grid Background="#FFE5E5E5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="148*"/>
+                    <ColumnDefinition Width="13*"/>
+                    <ColumnDefinition Width="669*"/>
+                </Grid.ColumnDefinitions>
                 <Button x:Name="Statistics_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
                     <Image>
                         <Image.Source>stock profile image.png</Image.Source>
                     </Image>
                 </Button>
-                <Grid Margin="137,50,10,10">
+                <Grid Margin="137,50,10,10" Grid.ColumnSpan="3">
                     <Rectangle x:Name="Statistics_tab_rectangle" Fill="#FFCFC6C6" Stroke="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                     <TextBlock HorizontalAlignment="Stretch" Height="234" Margin="32,37" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Stretch" />
                     <Button x:Name="Statistics_tab_left_button" Content="&lt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
