@@ -1,23 +1,78 @@
 <Exercises>
   <Beginner>
-    <Workout name = "" target = "" status = "accepted" />
     <Workout name = "Lunges" target = "legs" status = "accepted" />
     <Workout name = "Body Weight Squats" target = "legs" status = "accepted" />
     <Workout name = "Jump Squats" target = "legs" status = "accepted" />
+    <Workout name = "Hip Bridge" target = "legs" status = "accepted" />
     <Workout name = "Wall Squat" target = "legs" status = "accepted" />
+    <Workout name = "Hamstring Curls" target = "legs" status = "accepted" />
+    <Workout name = "Calf Raises" target = "legs" status = "accepted" />
     <Workout name = "Farmer Carry" target = "upperbody" status = "accepted" />
-    <Workout name = "Tricep Curls" target = "upperbody" status = "accepted" />
+    <Workout name = "Tricep Extensions" target = "upperbody" status = "accepted" />
     <Workout name = "Bicep Curls" target = "upperbody" status = "accepted" />
     <Workout name = "Push Ups" target = "upperbody" status = "accepted" />
+    <Workout name = "Dumbell Overhead Press" target = "Upperbody" status = "accepted" />
     <Workout name = "Sit Ups" target = "core" status = "accepted" />
     <Workout name = "Crunches" target = "core" status = "accepted" />
-
+    <Workout name = "Mountain Climbers" target = "core" status = "accepted" />
+    <Workout name = "1 mile run" target = "cardio" status = "accepted" />
+    <Workout name = "Burpees" target = "cardio" status = "accepted" />
+    <Workout name = "3 One-minute sprints" target = "cardio" status = "accepted" />  
   </Beginner>
   <Intermediate>
-    
+    <Workout name = "High Repetition Barbell Lunges" target = "legs" status = "accepted" />
+    <Workout name = "High Repetition Barbell Back Squats" target = "legs" status = "accepted" />
+    <Workout name = "Body Weight Squats" target = "legs" status = "accepted" />
+    <Workout name = "Jump Squats" target = "legs" status = "accepted" />
+    <Workout name = "Hip Bridge" target = "legs" status = "accepted" />
+    <Workout name = "Box Jumps" target = "legs" status = "accepted" />
+    <Workout name = "Wall Squat" target = "legs" status = "accepted" />
+    <Workout name = "Hamstring Curls" target = "legs" status = "accepted" />
+    <Workout name = "Calf Raises" target = "legs" status = "accepted" />
+    <Workout name = "Extended Farmer Carry" target = "upperbody" status = "accepted" />
+    <Workout name = "Tricep Extensions" target = "upperbody" status = "accepted" />
+    <Workout name = "High Repetition Chest Press" target = "upperbody" status = "accepted" />
+    <Workout name = "High Repetition Barbell Row" target = "upperbody" status = "accepted" />
+    <Workout name = "Bicep Curls" target = "upperbody" status = "accepted" />
+    <Workout name = "High Repetition Pull Ups" target = "upperbody" status = "accepted" />
+    <Workout name = "Push Ups" target = "upperbody" status = "accepted" />
+    <Workout name = "Dumbell Overhead Press" target = "Upperbody" status = "accepted" />
+    <Workout name = "Sit Ups" target = "core" status = "accepted" />
+    <Workout name = "45-second Plank" target = "core" status = "accepted" />
+    <Workout name = "Crunches" target = "core" status = "accepted" />
+    <Workout name = "Mountain Climbers" target = "core" status = "accepted" />
+    <Workout name = "2 mile run" target = "cardio" status = "accepted" />
+    <Workout name = "Burpees" target = "cardio" status = "accepted" />
+    <Workout name = "5 One-minute sprints" target = "cardio" status = "accepted" />  
+    <Workout name = "200-yard Sprint " target = "cardio" status = "accepted" />
   </Intermediate>
   <Expert>
-    
+    <Workout name = "High Repetition Barbell Lunges" target = "legs" status = "accepted" />
+    <Workout name = "High Repetition Barbell Back Squats with Hold" target = "legs" status = "accepted" />
+    <Workout name = "Body Weight Squats" target = "legs" status = "accepted" />
+    <Workout name = "Hip Bridge" target = "legs" status = "accepted" />
+    <Workout name = "Jump Squats" target = "legs" status = "accepted" />
+    <Workout name = "Box Jumps" target = "legs" status = "accepted" />
+    <Workout name = "Hamstring Curls" target = "legs" status = "accepted" />
+    <Workout name = "Calf Raises" target = "legs" status = "accepted" />
+    <Workout name = "Extended Farmer Carry" target = "upperbody" status = "accepted" />
+    <Workout name = "Tricep Extensions" target = "upperbody" status = "accepted" />
+    <Workout name = "High Repetition Chest Press" target = "upperbody" status = "accepted" />
+    <Workout name = "High Repetition Barbell Row" target = "upperbody" status = "accepted" />
+    <Workout name = "Bicep Curls" target = "upperbody" status = "accepted" />
+    <Workout name = "High Repetition Pull Ups" target = "upperbody" status = "accepted" />
+    <Workout name = "Push Ups with Hold" target = "upperbody" status = "accepted" />
+    <Workout name = "Dumbell Overhead Press" target = "Upperbody" status = "accepted" />
+    <Workout name = "Sit Ups" target = "core" status = "accepted" />
+    <Workout name = "1-minute Plank" target = "core" status = "accepted" />
+    <Workout name = "Crunches" target = "core" status = "accepted" />
+    <Workout name = "Knees to Elbows" target = "core" status = "accepted" />
+    <Workout name = "Turkish Get Up" target = "core" status = "accepted" />
+    <Workout name = "Mountain Climbers" target = "core" status = "accepted" />
+    <Workout name = "2 mile run" target = "cardio" status = "accepted" />
+    <Workout name = "Burpees with Sprint" target = "cardio" status = "accepted" />
+    <Workout name = "5 One-minute sprints" target = "cardio" status = "accepted" />  
+    <Workout name = "300-yard Sprint " target = "cardio" status = "accepted" />
   </Expert>
 </Exercises>
   
