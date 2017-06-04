@@ -16,7 +16,7 @@ namespace TrackFit_Project
         /// <summary>
         /// This is the double array that contians all exercises for the week. 7 columns, one for each day of the week.
         /// </summary>
-        public Exercise[][] _exercises = new Exercise[7][];
+        public XmlNode[,] _exercises = new XmlNode[7,6];
         public const String _path = @"C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\Exercises.xml";
         public UserProfile _user = ApplicationServices.User;
 
@@ -34,6 +34,23 @@ namespace TrackFit_Project
 
         #endregion
 
+        #region Properties
+
+        public XmlNode[,] Exercises
+        {
+            get
+            {
+                return _exercises;
+            }
+
+            set
+            {
+                _exercises = value;
+            }
+        }
+
+        #endregion
+
         #region Methods
 
         public void buildPlan()
@@ -42,14 +59,17 @@ namespace TrackFit_Project
             {
                 case ExerciseGoal.Strength:
                     buildStrengthPlan();
+                    _user.PlanCreated = true;
                     break;
 
                 case ExerciseGoal.Tone:
                     buildTonePlan();
+                    _user.PlanCreated = true;
                     break;
 
                 case ExerciseGoal.Weight_Loss:
                     buildWeightLossPlan();
+                    _user.PlanCreated = true;
                     break;
 
                 default:
@@ -63,11 +83,26 @@ namespace TrackFit_Project
         /// </summary>
         private void buildTonePlan()
         {
-            getUpperbodyExercise();
-            getUpperbodyExercise();
-            getLegsExercise();
-            getLegsExercise();
-            getCardioExercise();
+            for (int i = 0; i < 7; i++)
+            {
+                // Light day, usually wednesday
+                if (i == 2)
+                {
+                    _exercises[i,0] = Pick(ApplicationServices.User.getCardioExercises());
+                    _exercises[i,1] = Pick(ApplicationServices.User.getCardioExercises());
+                }
+                else if (i == 5 || i == 6)
+                {
+                    _exercises[i,0] = Pick(ApplicationServices.User.getRest());
+                }
+
+                _exercises[i,0] = Pick(ApplicationServices.User.getUpperbodyExercises());
+                _exercises[i,1] = Pick(ApplicationServices.User.getUpperbodyExercises());
+                _exercises[i,2] = Pick(ApplicationServices.User.getLegExercises());
+                _exercises[i,3] = Pick(ApplicationServices.User.getLegExercises());
+                _exercises[i,4] = Pick(ApplicationServices.User.getCardioExercises());
+                _exercises[i,5] = Pick(ApplicationServices.User.getCoreExercises());
+            }
         }
 
         /// <summary>
@@ -75,11 +110,39 @@ namespace TrackFit_Project
         /// </summary>
         private void buildWeightLossPlan()
         {
-            getUpperbodyExercise();
-            getUpperbodyExercise();
-            getCardioExercise();
-            getCardioExercise();
-            getCardioExercise();
+            for (int i = 0; i < 7; i++)
+            {
+                // Upperbody and cardio day
+                if (i == 0 || i == 3)
+                {
+                    _exercises[i, 0] = Pick(ApplicationServices.User.getUpperbodyExercises());
+                    _exercises[i, 1] = Pick(ApplicationServices.User.getUpperbodyExercises());
+                    _exercises[i, 2] = Pick(ApplicationServices.User.getCardioExercises());
+                    _exercises[i, 3] = Pick(ApplicationServices.User.getCardioExercises());
+                    _exercises[i, 4] = Pick(ApplicationServices.User.getCardioExercises());
+                    _exercises[i, 5] = Pick(ApplicationServices.User.getCoreExercises());
+                }
+                // Light day, usually wednesday
+                else if (i == 2)
+                {
+                    _exercises[i, 0] = Pick(ApplicationServices.User.getCardioExercises());
+                    _exercises[i, 1] = Pick(ApplicationServices.User.getCardioExercises());
+                }
+                // Legs and Cardio day
+                else if (i == 1 || i == 4)
+                {
+                    _exercises[i, 0] = Pick(ApplicationServices.User.getLegExercises());
+                    _exercises[i, 1] = Pick(ApplicationServices.User.getLegExercises());
+                    _exercises[i, 2] = Pick(ApplicationServices.User.getCardioExercises());
+                    _exercises[i, 3] = Pick(ApplicationServices.User.getCardioExercises());
+                    _exercises[i, 4] = Pick(ApplicationServices.User.getCardioExercises());
+                    _exercises[i, 5] = Pick(ApplicationServices.User.getCoreExercises());
+                }
+                else if (i == 5 || i == 6)
+                {
+                    _exercises[i, 0] = Pick(ApplicationServices.User.getRest());
+                }
+            }
         }
 
         /// <summary>
@@ -87,33 +150,62 @@ namespace TrackFit_Project
         /// </summary>
         private void buildStrengthPlan()
         {
-            getUpperbodyExercise();
-            getUpperbodyExercise();
-            getUpperbodyExercise();
-
-            getLegsExercise();
-            getLegsExercise();
-            getLegsExercise();
-
-            getCardioExercise();
+            for (int i = 0; i < 7; i++)
+            {
+                // Upperbody and cardio day
+                if (i == 0 || i == 3)
+                {
+                    _exercises[i, 0] = Pick(ApplicationServices.User.getUpperbodyExercises());
+                    _exercises[i, 1] = Pick(ApplicationServices.User.getUpperbodyExercises());
+                    _exercises[i, 2] = Pick(ApplicationServices.User.getUpperbodyExercises());
+                    _exercises[i, 3] = Pick(ApplicationServices.User.getCoreExercises());
+                    _exercises[i, 4] = Pick(ApplicationServices.User.getCoreExercises());
+                    _exercises[i, 5] = Pick(ApplicationServices.User.getCardioExercises());
+                }
+                // Light day, usually wednesday
+                else if (i == 2)
+                {
+                    _exercises[i, 0] = Pick(ApplicationServices.User.getCoreExercises());
+                    _exercises[i, 1] = Pick(ApplicationServices.User.getCardioExercises());
+                }
+                // Legs and Cardio day
+                else if (i == 1 || i == 4)
+                {
+                    _exercises[i, 0] = Pick(ApplicationServices.User.getLegExercises());
+                    _exercises[i, 1] = Pick(ApplicationServices.User.getLegExercises());
+                    _exercises[i, 2] = Pick(ApplicationServices.User.getLegExercises());
+                    _exercises[i, 3] = Pick(ApplicationServices.User.getCoreExercises());
+                    _exercises[i, 4] = Pick(ApplicationServices.User.getCoreExercises());
+                    _exercises[i, 5] = Pick(ApplicationServices.User.getCardioExercises());
+                }
+                else if (i == 5 || i == 6)
+                {
+                    _exercises[i, 0] = Pick(ApplicationServices.User.getRest());
+                }
+            }
         }
 
-        private void getCardioExercise()
+        private XmlNode Pick(List<XmlNode> list)
         {
-            
+            Random rando = new Random();
+
+            int r = rando.Next(list.Count);
+
+            return list.ElementAt(r);
         }
 
-        private void getLegsExercise()
+        public String planToString(int day)
         {
-            throw new NotImplementedException();
+            String planStr = "\u2022 ";
+
+            for (int i = 0; i < 6; i++)
+            {
+                planStr = planStr + _exercises[day,i].Attributes["name"].Value;
+                planStr = "\n\u2022 ";
+
+            }
+            return planStr;
         }
-
-        private void getUpperbodyExercise()
-        {
-            throw new NotImplementedException();
-        }
-
-
 
         #endregion
 
