@@ -33,7 +33,9 @@
                 </TextBlock>
             </Grid>
         </TabItem>
-        <TabItem Header="Nutrition">
+        <TabItem Header="Nutrition"
+             HorizontalAlignment="Left"
+             Width="64">
             <Grid Background="#FFE5E5E5">
                 <Button x:Name="Nutrition_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
                     <Image>

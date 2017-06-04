@@ -1,7 +1,7 @@
 ﻿<Application x:Name="TrackFit_App" x:Class="TrackFit_Project.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="Login Page.xaml">
+             StartupUri="Profile Page.xaml">
     <Application.Resources>
          
     </Application.Resources>

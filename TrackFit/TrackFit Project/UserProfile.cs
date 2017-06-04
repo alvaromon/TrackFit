@@ -286,10 +286,12 @@ namespace TrackFit_Project
             {
                 return "Strength";
             }
-            else if (ApplicationServices.User.ExerciseGoal == ExerciseGoal.Tone)
+            else
             {
                 return "Tone";
             }
+
+
         }
 
         #endregion
