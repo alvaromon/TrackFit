@@ -199,7 +199,7 @@ namespace TrackFit_Project
 
             for (int i = 0; i < 6; i++)
             {
-                if (_exercises[day, i] != null)
+                if (_exercises[day,i] != null)
                 {
                     planStr = planStr + _exercises[day, i].Attributes["name"].Value;
 
