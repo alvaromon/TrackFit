@@ -19,6 +19,7 @@
     <Workout name = "Shuffle Sprints" target = "cardio" status = "accepted" />
     <Workout name = "3 One-minute sprints" target = "cardio" status = "accepted" />
     <Workout name = "Wind Sprints" target = "cardio" status = "accepted" />
+    <Workout name = "Rest Day" target = "rest" status = "accepted" />
   </Beginner>
   <Intermediate>
     <Workout name = "Barbell Lunges" target = "legs" status = "accepted" />
@@ -48,6 +49,7 @@
     <Workout name = "Man-makers" target = "cardio" status = "accepted" />
     <Workout name = "200-yard Sprint " target = "cardio" status = "accepted" />
     <Workout name = "Wind Sprints with Squats" target = "cardio" status = "accepted" />
+    <Workout name = "Rest Day" target = "rest" status = "accepted" />
   </Intermediate>
   <Expert>
     <Workout name = "Barbell Lunges" target = "legs" status = "accepted" />
@@ -78,6 +80,7 @@
     <Workout name = "5 One-minute sprints" target = "cardio" status = "accepted" />
     <Workout name = "300-yard Sprint " target = "cardio" status = "accepted" />
     <Workout name = "Wind Sprints with Squats" target = "cardio" status = "accepted" />
+    <Workout name = "Rest Day" target = "rest" status = "accepted" />
   </Expert>
 </Exercises>
   

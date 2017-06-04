@@ -55,6 +55,16 @@ namespace TrackFit_Project
             if ( Password_Text_Box.Password == userPassword )
             {
                 ApplicationServices.User = new UserProfile(path);
+                
+                // Check if a plan has already been created, if not create a new one
+                if (ApplicationServices.User.PlanCreated)
+                {
+                    // Load stored plan
+                }
+                else
+                {
+                    ApplicationServices.Plan = new ExercisePlan();
+                }
 
                 Window mainWindow = Application.Current.MainWindow;
                 mainWindow.Content = new Main_Page();

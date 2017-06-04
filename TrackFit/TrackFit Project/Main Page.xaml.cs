@@ -20,9 +20,12 @@ namespace TrackFit_Project
     /// </summary>
     public partial class Main_Page : Page
     {
+        public int _day = 0;
+
         public Main_Page()
         {
             InitializeComponent();
+            Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
         }
 
         private void profileButtonClick(object sender, RoutedEventArgs e)
@@ -37,6 +40,20 @@ namespace TrackFit_Project
 
             Window mainWindow = Application.Current.MainWindow;
             mainWindow.Content = new Login_Page();
+        }
+
+        private void Exercise_tab_Right_button_Click(object sender, RoutedEventArgs e)
+        {
+            // 0-6 - Monday-Sunday
+            _day++;
+            Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
+
+        }
+
+        private void Exercise_tab_left_button_Click(object sender, RoutedEventArgs e)
+        {
+            _day--;
+            Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
         }
     }
 }
