@@ -51,6 +51,7 @@ namespace TrackFit_Project
             if (_day == 6)
             {
                 Exercise_tab_Right_button.IsEnabled = false;
+                Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
             }
             else
             {
@@ -68,6 +69,7 @@ namespace TrackFit_Project
             if (_day == 0)
             {
                 Exercise_tab_left_button.IsEnabled = false;
+                Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
             }
             else
             {
