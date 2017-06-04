@@ -28,6 +28,7 @@ namespace TrackFit_Project
         private ExerciseLevel _exerciseLevel;
         private ExerciseGoal _exerciseGoal;
         private XmlDocument _xmlFile;
+        private XmlDocument _xmlExerciseFile;
         private String _path;
         private bool _planCreated;
 
@@ -50,8 +51,13 @@ namespace TrackFit_Project
         public UserProfile(String path)
         {
             this._path = path;
+
             this._xmlFile = new XmlDocument();
             this._xmlFile.Load(path);
+
+            this._xmlExerciseFile = new XmlDocument();
+            this._xmlExerciseFile.Load(System.IO.Path.Combine(Environment.CurrentDirectory, $@"Exercises\{ApplicationServices.User.ExerciseGoal}.xml"));
+
             readProfileInfo();
         }
 
@@ -60,7 +66,7 @@ namespace TrackFit_Project
         #region Properties
 
         /// <summary>
-        /// Property used to get or set the userss first name
+        /// Property used to get or set the user's first name
         /// </summary>
         public string FirstName
         {
@@ -90,9 +96,53 @@ namespace TrackFit_Project
         public int Age { get; set; }
         public double Height { get; set;  }
         public double Weight { get; set; }
-        public ExerciseLevel ExerciseLevel { get; set; }
-        public ExerciseGoal ExerciseGoal { get; set; }
-        public bool PlanCreated { get; set; }
+        public XmlDocument XMLFile
+        {
+            get
+            {
+                return _xmlFile;
+            }
+            set
+            {
+                _xmlFile = value;
+            }
+        }
+        public ExerciseLevel ExerciseLevel
+        {
+            get
+            {
+                return _exerciseLevel;
+            }
+            set
+            {
+                _exerciseLevel = value;
+            }
+        }
+        public ExerciseGoal ExerciseGoal
+        {
+            get
+            {
+                return _exerciseGoal;
+            }
+
+            set
+            {
+                _exerciseGoal = value;
+            }
+        }
+        public bool PlanCreated
+        {
+            get
+            {
+                return _planCreated;
+            }
+
+            set
+            {
+                _planCreated = value;
+                _xmlFile.SelectSingleNode(@"User/Plan").InnerText = value.ToString();
+            }
+        }
 
         #endregion
 
@@ -119,6 +169,129 @@ namespace TrackFit_Project
             {
                 this._planCreated = false;
             }
+        }
+
+        /// <summary>
+        ///  This will return a List of all the cardio exercises in the users exercise goal and exercise level
+        /// </summary>
+        public List<XmlNode> getCardioExercises()
+        {
+            XmlDocument nodeList = new XmlDocument();
+            List<XmlNode> exerciseList = new List<XmlNode>();
+
+            nodeList = _xmlFile;
+
+            foreach ( XmlNode node in nodeList.SelectNodes( $@"Exercises/{_exerciseLevel}" ) )
+            {
+                if ( node.Attributes["target"].Value == "cardio")
+                {
+                    exerciseList.Add(node);
+                }
+            }
+
+            return exerciseList;
+        }
+
+        /// <summary>
+        ///  This will return a List of all the upperbody exercises in the users exercise goal and exercise level
+        /// </summary>
+        public List<XmlNode> getUpperbodyExercises()
+        {
+            XmlDocument nodeList = ApplicationServices.User._xmlExerciseFile;
+            List<XmlNode> exerciseList = new List<XmlNode>();
+
+            nodeList = _xmlFile;
+
+            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}"))
+            {
+                if (node.Attributes["target"].Value == "upperbody")
+                {
+                    exerciseList.Add(node);
+                }
+            }
+
+            return exerciseList;
+        }
+
+        /// <summary>
+        ///  This will return a List of all the leg exercises in the users exercise goal and exercise level
+        /// </summary>
+        public List<XmlNode> getLegExercises()
+        {
+            XmlDocument nodeList = new XmlDocument();
+            List<XmlNode> exerciseList = new List<XmlNode>();
+
+            nodeList = _xmlFile;
+
+            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}"))
+            {
+                if (node.Attributes["target"].Value == "legs")
+                {
+                    exerciseList.Add(node);
+                }
+            }
+
+            return exerciseList;
+        }
+
+        /// <summary>
+        ///  This will return a List of all the cardio exercises in the users exercise goal and exercise level
+        /// </summary>
+        public List<XmlNode> getCoreExercises()
+        {
+            XmlDocument nodeList = new XmlDocument();
+            List<XmlNode> exerciseList = new List<XmlNode>();
+
+            nodeList = _xmlFile;
+
+            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}"))
+            {
+                if (node.Attributes["target"].Value == "core")
+                {
+                    exerciseList.Add(node);
+                }
+            }
+
+            return exerciseList;
+        }
+
+        /// <summary>
+        ///  This will return a List with a Rest Day Node
+        /// </summary>
+        public List<XmlNode> getRest()
+        {
+            XmlDocument nodeList = new XmlDocument();
+            List<XmlNode> exerciseList = new List<XmlNode>();
+
+            nodeList = _xmlFile;
+
+            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}"))
+            {
+                if (node.Attributes["target"].Value == "rest")
+                {
+                    exerciseList.Add(node);
+                }
+            }
+
+            return exerciseList;
+        }
+
+        public String goalString()
+        {
+            if (ApplicationServices.User.ExerciseGoal == ExerciseGoal.Weight_Loss)
+            {
+                return "Weight_Loss";
+            }
+            else if (ApplicationServices.User.ExerciseGoal == ExerciseGoal.Strength)
+            {
+                return "Strength";
+            }
+            else
+            {
+                return "Tone";
+            }
+
+
         }
 
         #endregion

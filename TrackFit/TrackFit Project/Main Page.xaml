@@ -24,16 +24,18 @@
                 </Button>
                 <Grid Margin="137,50,10,10">
                     <Rectangle x:Name="Exercise_tab_rectangle" Fill="#FFCFC6C6" Stroke="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                    <TextBlock HorizontalAlignment="Stretch" Height="234" Margin="32,37" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Stretch" />
-                    <Button x:Name="Exercise_tab_left_button" Content="&lt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
-                    <Button x:Name="Exercise_tab_Right_button" Content="&gt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Right" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
+                    <TextBlock x:Name="Exercise_Text_Block" HorizontalAlignment="Stretch" Height="234" Margin="32,37" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Stretch" />
+                    <Button x:Name="Exercise_tab_left_button" Content="&lt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="50" FontSize="18" FontWeight="Bold" Click="Exercise_tab_left_button_Click"/>
+                    <Button x:Name="Exercise_tab_Right_button" Content="&gt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Right" Width="20" Height="50" FontSize="18" FontWeight="Bold" Click="Exercise_tab_Right_button_Click"/>
                 </Grid>
                 <TextBlock x:Name="Log_Out_Text_Block" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
                         <Hyperlink x:Name="Log_out_hyperlink" Click="Log_out_hyperlink_Click">Log out</Hyperlink>
                 </TextBlock>
             </Grid>
         </TabItem>
-        <TabItem Header="Nutrition">
+        <TabItem Header="Nutrition"
+             HorizontalAlignment="Left"
+             Width="64">
             <Grid Background="#FFE5E5E5">
                 <Button x:Name="Nutrition_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
                     <Image>

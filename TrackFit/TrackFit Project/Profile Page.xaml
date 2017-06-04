@@ -11,31 +11,98 @@
       Foreground="#FFE5E5E5"
       Background="#FFE5E5E5"
       ShowsNavigationUI="false">
+  <Border Padding="15">
+    <Grid>
 
-  <Grid>
-    <TabControl Margin="10,10,10.333,10.333">
-      <TabItem Header="Exercise">
-        <Grid Background="#FFE5E5E5">
-          <Button Content="Exit Profile Settings"
-                  HorizontalAlignment="Left"
-                  Margin="22,24,0,0"
-                  VerticalAlignment="Top"
-                  Width="124"
-                  Click="exitProfilePage">
-          </Button>
-        </Grid>
-      </TabItem>
-      <TabItem Header="Nutrition">
-        <Grid Background="#FFE5E5E5">
-          <Button Content="Exit Profile Settings"
-                  HorizontalAlignment="Left"
-                  Margin="22,24,0,0"
-                  VerticalAlignment="Top"
-                  Width="124"
-                  Click="exitProfilePage">
-          </Button>
-        </Grid>
-      </TabItem>
-    </TabControl>
-  </Grid>
+      <!--Tabs-->
+      <TabControl Margin="140,10,10.333,10.333">
+        <TabItem Header="Exercise">
+          <Grid Background="#FFE5E5E5">
+            <Button Content="Exit Profile Settings"
+                    HorizontalAlignment="Left"
+                    Margin="20,342,0,0"
+                    VerticalAlignment="Top"
+                    Width="124"
+                    Click="exitProfilePage">
+            </Button>
+            <StackPanel HorizontalAlignment="Left"
+                        Height="315"
+                        Margin="120,26,0,0"
+                        VerticalAlignment="Top"
+                        Width="528">
+              <TextBlock TextWrapping="Wrap"
+                         Text="Exercise "
+                         FontSize="20"
+                         FontStyle="Italic"
+                         FontWeight="Bold" />
+            </StackPanel>
+          </Grid>
+        </TabItem>
+        <TabItem Header="Nutrition">
+          <Grid Background="#FFE5E5E5">
+            <Button Content="Exit Profile Settings"
+                    HorizontalAlignment="Left"
+                    Margin="10,356,0,0"
+                    VerticalAlignment="Top"
+                    Width="124"
+                    Click="exitProfilePage">
+            </Button>
+            <StackPanel HorizontalAlignment="Left"
+                        Height="315"
+                        Margin="120,26,0,0"
+                        VerticalAlignment="Top"
+                        Width="528">
+              <TextBlock TextWrapping="Wrap"
+                         Text="Nutrition "
+                         FontSize="20"
+                         FontStyle="Italic"
+                         FontWeight="Bold" />
+            </StackPanel>
+          </Grid>
+        </TabItem>
+        <TabItem Header="Statistics"
+                 Margin="-2,-2,-2,0">
+          <Grid Background="#FFE5E5E5">
+            <Button Content="Exit Profile Settings"
+                    HorizontalAlignment="Left"
+                    Margin="10,356,0,0"
+                    VerticalAlignment="Top"
+                    Width="124"
+                    Click="exitProfilePage" />
+            <StackPanel HorizontalAlignment="Left"
+                        Height="315"
+                        Margin="120,26,0,0"
+                        VerticalAlignment="Top"
+                        Width="528">
+              <TextBlock TextWrapping="Wrap"
+                         Text="Statistics "
+                         FontSize="20"
+                         FontStyle="Italic"
+                         FontWeight="Bold" />
+            </StackPanel>
+          </Grid>
+        </TabItem>
+      </TabControl>
+      <Label Content="TrackFit"
+             HorizontalAlignment="Left"
+             Margin="21,10,0,0"
+             VerticalAlignment="Top"
+             Height="44"
+             Width="101"
+             FontSize="22"
+             RenderTransformOrigin="-0.098,0.377"
+             FontWeight="Bold"
+             FontStyle="Italic" />
+
+      <!--Image -->
+      <Image HorizontalAlignment="Left"
+             Height="121"
+             Margin="162,81,0,0"
+             VerticalAlignment="Top"
+             Width="108"
+             Source="Images/FB_IMG_1449943028849.jpg" />
+
+    </Grid>
+  </Border>
+
 </Page>
