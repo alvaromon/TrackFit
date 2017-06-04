@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ashley%20and%20i.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sportsbettingspot-summer-olympics-weightlifting.ico")]
 
 
