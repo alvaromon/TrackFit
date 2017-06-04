@@ -23,13 +23,7 @@ namespace TrackFit_Project
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = "TrackFit";
         }
-
-        public Frame getFrame()
-        {
-            return Main_Window_Frame;
-        }
-
-
     }
 }
