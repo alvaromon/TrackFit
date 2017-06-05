@@ -38,7 +38,7 @@
     <Workout name = "Bicep Curls" target = "upperbody" status = "accepted" />
     <Workout name = "Pull Ups" target = "upperbody" status = "accepted" />
     <Workout name = "Push Ups" target = "upperbody" status = "accepted" />
-    <Workout name = "Dumbell Overhead Press" target = "Upperbody" status = "accepted" />
+    <Workout name = "Dumbell Overhead Press" target = "upperbody" status = "accepted" />
     <Workout name = "Sit Ups" target = "core" status = "accepted" />
     <Workout name = "45-second Plank" target = "core" status = "accepted" />
     <Workout name = "Crunches" target = "core" status = "accepted" />

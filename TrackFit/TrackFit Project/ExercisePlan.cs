@@ -19,6 +19,7 @@ namespace TrackFit_Project
         public XmlNode[,] _exercises = new XmlNode[7,6];
         public const String _path = @"C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\Exercises.xml";
         public UserProfile _user = ApplicationServices.User;
+        private static Random rando = new Random();
 
         #endregion
 
@@ -146,7 +147,7 @@ namespace TrackFit_Project
         }
 
         /// <summary>
-        /// 
+        /// This function will build an exercise plan for a User that wants to gain strength
         /// </summary>
         private void buildStrengthPlan()
         {
@@ -186,9 +187,7 @@ namespace TrackFit_Project
         }
 
         private XmlNode Pick(List<XmlNode> list)
-        {
-            Random rando = new Random();
-
+        { 
             int r = rando.Next(list.Count);
 
             return list.ElementAt(r);
@@ -200,14 +199,19 @@ namespace TrackFit_Project
 
             for (int i = 0; i < 6; i++)
             {
-                planStr = planStr + _exercises[day,i].Attributes["name"].Value;
-                planStr = "\n\u2022 ";
+                if (_exercises[day,i] != null)
+                {
+                    planStr = planStr + _exercises[day, i].Attributes["name"].Value;
 
+                    if (i < 5 && _exercises[day,i+1] != null)
+                    {
+                        planStr = planStr + "\n\u2022 ";
+                    }
+                }
             }
             return planStr;
         }
 
         #endregion
-
     }
 }

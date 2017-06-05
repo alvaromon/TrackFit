@@ -7,6 +7,7 @@
       mc:Ignorable="d"
       d:DesignHeight="453.635"
       d:DesignWidth="855.207"
+      WindowTitle="Page Title"
       Title="Profile_Page"
       Foreground="#FFE5E5E5"
       Background="#FFE5E5E5"

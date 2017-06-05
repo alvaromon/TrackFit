@@ -56,7 +56,7 @@ namespace TrackFit_Project
             this._xmlFile.Load(path);
 
             this._xmlExerciseFile = new XmlDocument();
-            this._xmlExerciseFile.Load(System.IO.Path.Combine(Environment.CurrentDirectory, $@"Exercises\{ApplicationServices.User.ExerciseGoal}.xml"));
+            this._xmlExerciseFile.Load(System.IO.Path.Combine(Environment.CurrentDirectory, $@"Exercises\{goalString()}.xml"));
 
             readProfileInfo();
         }
@@ -159,7 +159,19 @@ namespace TrackFit_Project
             this._height = Int32.Parse( _xmlFile.SelectSingleNode(@"User/HeightInches").InnerText.Trim() );
             this._weight = Int32.Parse( _xmlFile.SelectSingleNode(@"User/Weight").InnerText.Trim() );
             this._exerciseLevel= (ExerciseLevel) Int32.Parse( _xmlFile.SelectSingleNode(@"User/ExerciseLevel").InnerText.Trim() );
-            this._exerciseGoal = (ExerciseGoal) Int32.Parse( _xmlFile.SelectSingleNode(@"User/ExerciseGoal").InnerText.Trim() );
+
+            if (_xmlFile.SelectSingleNode(@"User/ExerciseGoal").InnerText.Trim() == "Weight_Loss")
+            {
+                this._exerciseGoal = ExerciseGoal.Weight_Loss;
+            }
+            else if (_xmlFile.SelectSingleNode(@"User/ExerciseGoal").InnerText.Trim() == "Strength")
+            {
+                this._exerciseGoal = ExerciseGoal.Strength;
+            }
+            else
+            {
+                this._exerciseGoal = ExerciseGoal.Tone;
+            }
 
             if ( _xmlFile.SelectSingleNode(@"User/Plan").InnerText.Trim() == "True" )
             {
@@ -176,12 +188,12 @@ namespace TrackFit_Project
         /// </summary>
         public List<XmlNode> getCardioExercises()
         {
-            XmlDocument nodeList = new XmlDocument();
+            XmlDocument nodeList = ApplicationServices.User._xmlExerciseFile;
             List<XmlNode> exerciseList = new List<XmlNode>();
 
-            nodeList = _xmlFile;
+            nodeList = _xmlExerciseFile;
 
-            foreach ( XmlNode node in nodeList.SelectNodes( $@"Exercises/{_exerciseLevel}" ) )
+            foreach ( XmlNode node in nodeList.SelectNodes( $@"Exercises/{_exerciseLevel}/Workout" ) )
             {
                 if ( node.Attributes["target"].Value == "cardio")
                 {
@@ -200,9 +212,9 @@ namespace TrackFit_Project
             XmlDocument nodeList = ApplicationServices.User._xmlExerciseFile;
             List<XmlNode> exerciseList = new List<XmlNode>();
 
-            nodeList = _xmlFile;
+            nodeList = _xmlExerciseFile;
 
-            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}"))
+            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}/Workout"))
             {
                 if (node.Attributes["target"].Value == "upperbody")
                 {
@@ -218,12 +230,12 @@ namespace TrackFit_Project
         /// </summary>
         public List<XmlNode> getLegExercises()
         {
-            XmlDocument nodeList = new XmlDocument();
+            XmlDocument nodeList = ApplicationServices.User._xmlExerciseFile;
             List<XmlNode> exerciseList = new List<XmlNode>();
 
-            nodeList = _xmlFile;
+            nodeList = _xmlExerciseFile;
 
-            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}"))
+            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}/Workout"))
             {
                 if (node.Attributes["target"].Value == "legs")
                 {
@@ -239,12 +251,12 @@ namespace TrackFit_Project
         /// </summary>
         public List<XmlNode> getCoreExercises()
         {
-            XmlDocument nodeList = new XmlDocument();
+            XmlDocument nodeList = ApplicationServices.User._xmlExerciseFile;
             List<XmlNode> exerciseList = new List<XmlNode>();
 
-            nodeList = _xmlFile;
+            nodeList = _xmlExerciseFile;
 
-            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}"))
+            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}/Workout"))
             {
                 if (node.Attributes["target"].Value == "core")
                 {
@@ -260,12 +272,12 @@ namespace TrackFit_Project
         /// </summary>
         public List<XmlNode> getRest()
         {
-            XmlDocument nodeList = new XmlDocument();
+            XmlDocument nodeList = ApplicationServices.User._xmlExerciseFile;
             List<XmlNode> exerciseList = new List<XmlNode>();
 
-            nodeList = _xmlFile;
+            nodeList = _xmlExerciseFile;
 
-            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}"))
+            foreach (XmlNode node in nodeList.SelectNodes($@"Exercises/{_exerciseLevel}/Workout"))
             {
                 if (node.Attributes["target"].Value == "rest")
                 {
@@ -278,11 +290,11 @@ namespace TrackFit_Project
 
         public String goalString()
         {
-            if (ApplicationServices.User.ExerciseGoal == ExerciseGoal.Weight_Loss)
+            if (_xmlFile.SelectSingleNode(@"User/ExerciseGoal").InnerText.Trim() == "Weight_Loss")
             {
                 return "Weight_Loss";
             }
-            else if (ApplicationServices.User.ExerciseGoal == ExerciseGoal.Strength)
+            else if (_xmlFile.SelectSingleNode(@"User/ExerciseGoal").InnerText.Trim() == "Strength")
             {
                 return "Strength";
             }
@@ -290,8 +302,6 @@ namespace TrackFit_Project
             {
                 return "Tone";
             }
-
-
         }
 
         #endregion

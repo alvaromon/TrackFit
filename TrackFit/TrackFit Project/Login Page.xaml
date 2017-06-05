@@ -6,15 +6,16 @@
       xmlns:local="clr-namespace:TrackFit_Project"
       mc:Ignorable="d" 
       d:DesignHeight="453.635" d:DesignWidth="855.207"
+      WindowTitle="TrackFit"
       Title="Login_Page" 
       ShowsNavigationUI = "false" >
 
     <Grid Background="#FFE5E5E5">
         <TextBox x:Name="Username_Text_Box" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Margin="338,194,0,0"/>
-        <PasswordBox x:Name="Password_Text_Box" HorizontalAlignment="Left" Margin="338,221,0,0" VerticalAlignment="Top" Width="136"/>
+        <PasswordBox x:Name="Password_Text_Box" HorizontalAlignment="Left" Height="23" Margin="338,221,0,0" VerticalAlignment="Top" Width="137"/>
         <TextBlock x:Name="Username_Label" HorizontalAlignment="Left" Margin="265,195,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
         <TextBlock x:Name="Password_Label" HorizontalAlignment="Left" Margin="265,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Pas"/><Run Text="sword:"/></TextBlock>
-        <Button x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Margin="361,250,0,0" VerticalAlignment="Top" Width="86" Click="Login_Button_Click"/>
+        <Button x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Margin="361,250,0,0" VerticalAlignment="Top" Width="86" Click="Login_Button_Click" IsDefault="True"/>
         <TextBlock x:Name="Banner" HorizontalAlignment="Left" Margin="338,64,0,0" TextWrapping="Wrap" Text="TrackFit" VerticalAlignment="Top" Width="137" Height="66" FontSize="36" FontWeight="Bold"/>
         <Button x:Name="Create_Account_Button" Content="Create Account" HorizontalAlignment="Left" Margin="361,275,0,0" VerticalAlignment="Top" Width="86"/>
         <TextBlock x:Name="Login_Error" HorizontalAlignment="Left" Margin="338,157,0,0" TextWrapping="Wrap" Text="The Username or Password did not match. please try again!" VerticalAlignment="Top" Width="189" Foreground="Red" Visibility="Hidden"/>
