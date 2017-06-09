@@ -12,6 +12,7 @@
       Foreground="#FFE5E5E5"
       Background="#FFE5E5E5"
       ShowsNavigationUI="false">
+      
   <Border Padding="15">
     <Grid>
 
@@ -19,18 +20,25 @@
       <TabControl Margin="140,10,10.333,10.333">
         <TabItem Header="Exercise">
           <Grid Background="#FFE5E5E5">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="200*" />
+            </Grid.ColumnDefinitions>
             <Button Content="Exit Profile Settings"
                     HorizontalAlignment="Left"
                     Margin="20,342,0,0"
                     VerticalAlignment="Top"
                     Width="124"
-                    Click="exitProfilePage">
+                    Click="exitProfilePage"
+                    Grid.ColumnSpan="2"
+                    Height="20">
             </Button>
             <StackPanel HorizontalAlignment="Left"
                         Height="315"
-                        Margin="120,26,0,0"
+                        Margin="27,26,0,0"
                         VerticalAlignment="Top"
-                        Width="528">
+                        Width="528"
+                        Grid.Column="1">
               <TextBlock TextWrapping="Wrap"
                          Text="Exercise "
                          FontSize="20"
