@@ -54,6 +54,9 @@ namespace TrackFit_Project
 
         #region Methods
 
+        /// <summary>
+        /// This function will build a plan according to user profile settings
+        /// </summary>
         public void buildPlan()
         {
             switch (ApplicationServices.User.ExerciseGoal)
@@ -189,6 +192,11 @@ namespace TrackFit_Project
             }
         }
 
+        /// <summary>
+        /// This function will take in a List of type XmlNode and return a random XmlNode from that list
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns>Randomly chosen XmlNode.</returns>
         private XmlNode Pick(List<XmlNode> list)
         {
             int r = rando.Next(list.Count);
@@ -196,6 +204,9 @@ namespace TrackFit_Project
             return list.ElementAt(r);
         }
 
+        /// <summary>
+        /// This function will erase duplicates from the user's exercise plan
+        /// </summary>
         private void FindandReplaceDuplicated()
         {
 
@@ -386,6 +397,11 @@ namespace TrackFit_Project
             }
         }
 
+        /// <summary>
+        /// This function ill return a string appropriate for displaying in TrackFit. Bulleted and double-spaced
+        /// </summary>
+        /// <param name="day"></param>
+        /// <returns>Formatted list of exercises</returns>
         public String planToString(int day)
         {
             String planStr = "\u2022 ";
