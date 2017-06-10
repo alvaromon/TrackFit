@@ -25,7 +25,7 @@
                 </Button>
                 <Grid Margin="137,50,10,10">
                     <Rectangle x:Name="Exercise_tab_rectangle" Fill="#FFCFC6C6" Stroke="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                    <TextBlock x:Name="Exercise_Text_Block" HorizontalAlignment="Stretch" Height="234" Margin="32,37" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Stretch" FontFamily="Tahoma" FontSize="16" />
+                    <TextBlock x:Name="Exercise_Text_Block" HorizontalAlignment="Stretch" Height="234" Margin="48,55,32,55" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Stretch" FontFamily="Tahoma" FontSize="16" />
                     <Button x:Name="Exercise_tab_left_button" Content="&lt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="50" FontSize="18" FontWeight="Bold" Click="Exercise_tab_left_button_Click"/>
                     <Button x:Name="Exercise_tab_Right_button" Content="&gt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Right" Width="20" Height="50" FontSize="18" FontWeight="Bold" Click="Exercise_tab_Right_button_Click"/>
                     <Label x:Name="Day_of_the_Week_Label" Content="Label" HorizontalAlignment="Left" Margin="297,10,0,0" VerticalAlignment="Top" Height="40" Width="167" FontFamily="Tahoma" FontSize="24" FontWeight="Bold"/>
