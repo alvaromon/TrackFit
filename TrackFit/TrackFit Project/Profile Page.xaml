@@ -5,9 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:TrackFit_Project"
       mc:Ignorable="d"
+<<<<<<< HEAD
       d:DesignHeight="453.635"
       d:DesignWidth="855.207"
       WindowTitle="Profile_Page"
+=======
+      d:DesignHeight="453.635" d:DesignWidth="855.207"
+      MinHeight="453.635" MinWidth="855.207"
+      WindowTitle="Page Title"
+>>>>>>> refs/remotes/origin/master
       Title="Profile_Page"
       Foreground="#FFE5E5E5"
       Background="#FFE5E5E5"

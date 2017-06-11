@@ -6,18 +6,21 @@
       xmlns:local="clr-namespace:TrackFit_Project"
       mc:Ignorable="d" 
       d:DesignHeight="453.635" d:DesignWidth="855.207"
+      MinHeight="453.635" MinWidth="855.207"
       WindowTitle="TrackFit"
       Title="Login_Page" 
       ShowsNavigationUI = "false" >
 
     <Grid Background="#FFE5E5E5">
-        <TextBox x:Name="Username_Text_Box" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Margin="338,194,0,0"/>
-        <PasswordBox x:Name="Password_Text_Box" HorizontalAlignment="Left" Height="23" Margin="338,221,0,0" VerticalAlignment="Top" Width="137"/>
-        <TextBlock x:Name="Username_Label" HorizontalAlignment="Left" Margin="265,195,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top"/>
-        <TextBlock x:Name="Password_Label" HorizontalAlignment="Left" Margin="265,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Pas"/><Run Text="sword:"/></TextBlock>
-        <Button x:Name="Login_Button" Content="Login" HorizontalAlignment="Left" Margin="361,250,0,0" VerticalAlignment="Top" Width="86" Click="Login_Button_Click" IsDefault="True"/>
-        <TextBlock x:Name="Banner" HorizontalAlignment="Left" Margin="338,64,0,0" TextWrapping="Wrap" Text="TrackFit" VerticalAlignment="Top" Width="137" Height="66" FontSize="36" FontWeight="Bold"/>
-        <Button x:Name="Create_Account_Button" Content="Create Account" HorizontalAlignment="Left" Margin="361,275,0,0" VerticalAlignment="Top" Width="86"/>
-        <TextBlock x:Name="Login_Error" HorizontalAlignment="Left" Margin="338,157,0,0" TextWrapping="Wrap" Text="The Username or Password did not match. please try again!" VerticalAlignment="Top" Width="189" Foreground="Red" Visibility="Hidden"/>
+        <Grid>
+            <TextBox x:Name="Username_Text_Box" TextWrapping="Wrap" Width="137" Height="23" Margin="338,193,380,238"/>
+            <PasswordBox x:Name="Password_Text_Box" Margin="338,221,380,210" Width="137" Height="23"/>
+            <TextBlock x:Name="Username_Label" Margin="265,195,534,243" TextWrapping="Wrap" Text="Username:" Width="56" Height="16"/>
+            <TextBlock x:Name="Password_Label" Margin="265,223,534,199" TextWrapping="Wrap" Width="56" Height="32"><Run Text="Pas"/><Run Text="sword:"/></TextBlock>
+            <Button x:Name="Login_Button" Content="Login" Click="Login_Button_Click" IsDefault="True" Width="86" Height="20" Margin="361,250,408,184"/>
+            <TextBlock x:Name="Banner" Margin="338,64,380,324" TextWrapping="Wrap" Text="TrackFit" FontSize="36" FontWeight="Bold" Width="137" Height="66"/>
+            <Button x:Name="Create_Account_Button" Content="Create Account"  Height="20" Width="86" Margin="361,275,408,159"/>
+            <TextBlock x:Name="Login_Error" Margin="338,157,328,262" TextWrapping="Wrap" Text="The Username or Password did not match. please try again!" Width="189" Foreground="Red" RenderTransformOrigin="0.5,0.5" Height="35" Visibility="Hidden"/>
+        </Grid>
     </Grid>
 </Page>

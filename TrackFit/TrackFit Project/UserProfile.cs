@@ -288,6 +288,10 @@ namespace TrackFit_Project
             return exerciseList;
         }
 
+        /// <summary>
+        /// This function will return a string containing the current user's exercise goal.
+        /// </summary>
+        /// <returns>The user's exervcise goal is returned</returns>
         public String goalString()
         {
             if (_xmlFile.SelectSingleNode(@"User/ExerciseGoal").InnerText.Trim() == "Weight_Loss")

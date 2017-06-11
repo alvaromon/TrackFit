@@ -21,12 +21,15 @@ namespace TrackFit_Project
     public partial class Main_Page : Page
     {
         public int _day = 0;
+        public String[] _dayStrings = new String[7] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 
         public Main_Page()
         {
             InitializeComponent();
             Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
             Exercise_tab_left_button.IsEnabled = false;
+            Day_of_the_Week_Label.Content = _dayStrings[0];
+
         }
 
         private void profileButtonClick(object sender, RoutedEventArgs e)
@@ -51,12 +54,14 @@ namespace TrackFit_Project
             if (_day == 6)
             {
                 Exercise_tab_Right_button.IsEnabled = false;
+                Day_of_the_Week_Label.Content = _dayStrings[_day];
                 Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
             }
             else
             {
                 Exercise_tab_Right_button.IsEnabled = true;
                 Exercise_tab_left_button.IsEnabled = true;
+                Day_of_the_Week_Label.Content = _dayStrings[_day];
                 Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
             }
         }
@@ -69,12 +74,14 @@ namespace TrackFit_Project
             if (_day == 0)
             {
                 Exercise_tab_left_button.IsEnabled = false;
+                Day_of_the_Week_Label.Content = _dayStrings[_day];
                 Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
             }
             else
             {
                 Exercise_tab_left_button.IsEnabled = true;
                 Exercise_tab_Right_button.IsEnabled = true;
+                Day_of_the_Week_Label.Content = _dayStrings[_day];
                 Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
             }
         }
