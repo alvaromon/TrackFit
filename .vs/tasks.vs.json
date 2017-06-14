@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-ImaniBB",
+      "appliesTo": "TrackFit/TrackFit Project/ImaniBB.jpg",
+      "type": "command"
+    },
+    {
+      "taskName": "task-KiKi",
+      "appliesTo": "TrackFit/TrackFit Project/Images/KiKi.jpg",
+      "type": "command"
+    }
+  ]
+}
