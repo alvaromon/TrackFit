@@ -94,6 +94,57 @@
                          FontSize="20"
                          FontStyle="Italic"
                          FontWeight="Bold" />
+              <!-- Grid divided into 4 separate Grids-->
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition Width="Auto"></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!-- nested Grid on the Left.  It isn't subdivided further with a splitter-->
+                <Grid Grid.Column="0"
+                      VerticalAlignment="Stretch">
+                  <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                  </Grid.RowDefinitions>
+                  <Button Margin="3"
+                          Grid.Row="0">Weight Chart Here</Button>
+                  <Button Margin="3"
+                          Grid.Row="1">Exercise Chart Here</Button>
+                </Grid>
+
+                <!-- This is the vertical splitter that sits between the two nested (left and right) grids. -->
+                <GridSplitter Grid.Column="1"
+                              Width="3"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Stretch"
+                              ShowsPreview="False"></GridSplitter>
+
+                <!--Nested Grid on the right. -->
+                <Grid Grid.Column="2">
+                  <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                  </Grid.RowDefinitions>
+
+                  <Button Grid.Row="0"
+                          Margin="3">Fat % Chart Here</Button>
+                  <Button Grid.Row="2"
+                          Margin="3">BMI/BMR Chart Here</Button>
+
+                  <!-- Horizontal Splitter that subdivides it into a top and bottom region-->
+                  <GridSplitter Grid.Row="1"
+                                Height="3"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Stretch"
+                                ShowsPreview="False"
+                                Margin="10,0,-0.333,25.667"
+                                Grid.RowSpan="2"></GridSplitter>
+                </Grid>
+              </Grid>
             </StackPanel>
           </Grid>
         </TabItem>
