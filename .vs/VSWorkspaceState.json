@@ -3,8 +3,10 @@
     "",
     "\\TrackFit",
     "\\TrackFit\\TrackFit Project",
-    "\\TrackFit\\TrackFit Project\\Images"
+    "\\TrackFit\\TrackFit Project\\Images",
+    "\\TrackFit\\TrackFit Project\\obj",
+    "\\TrackFit\\TrackFit Project\\obj\\Debug"
   ],
-  "SelectedNode": "\\TrackFit\\TrackFit Project\\Profile Page.xaml",
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\TrackFit\\TrackFit Project\\Images",
+  "PreviewInSolutionExplorer": true
 }

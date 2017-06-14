@@ -5,13 +5,18 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:TrackFit_Project"
       mc:Ignorable="d"
-      d:DesignHeight="453.635" d:DesignWidth="855.207"
-      MinHeight="453.635" MinWidth="855.207"
-      WindowTitle="Page Title"
+
+    
+      WindowTitle="TrackFit"
+
+          MinHeight="453.635" MinWidth="855.207"
+     
+
       Title="Profile_Page"
       Foreground="#FFE5E5E5"
       Background="#FFE5E5E5"
       ShowsNavigationUI="false">
+      
   <Border Padding="15">
     <Grid>
 
@@ -19,18 +24,25 @@
       <TabControl Margin="140,10,10.333,10.333">
         <TabItem Header="Exercise">
           <Grid Background="#FFE5E5E5">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="20*" />
+              <ColumnDefinition Width="200*" />
+            </Grid.ColumnDefinitions>
             <Button Content="Exit Profile Settings"
                     HorizontalAlignment="Left"
                     Margin="20,342,0,0"
                     VerticalAlignment="Top"
                     Width="124"
-                    Click="exitProfilePage">
+                    Click="exitProfilePage"
+                    Grid.ColumnSpan="2"
+                    Height="20">
             </Button>
             <StackPanel HorizontalAlignment="Left"
                         Height="315"
-                        Margin="120,26,0,0"
+                        Margin="27,26,0,0"
                         VerticalAlignment="Top"
-                        Width="528">
+                        Width="528"
+                        Grid.Column="1">
               <TextBlock TextWrapping="Wrap"
                          Text="Exercise "
                          FontSize="20"
@@ -39,11 +51,13 @@
             </StackPanel>
           </Grid>
         </TabItem>
-        <TabItem Header="Nutrition">
+        <TabItem Header="Nutrition"
+                 HorizontalAlignment="Left"
+                 Width="64">
           <Grid Background="#FFE5E5E5">
             <Button Content="Exit Profile Settings"
                     HorizontalAlignment="Left"
-                    Margin="10,356,0,0"
+                    Margin="20,342,0,0"
                     VerticalAlignment="Top"
                     Width="124"
                     Click="exitProfilePage">
@@ -66,7 +80,7 @@
           <Grid Background="#FFE5E5E5">
             <Button Content="Exit Profile Settings"
                     HorizontalAlignment="Left"
-                    Margin="10,356,0,0"
+                    Margin="20,342,0,0"
                     VerticalAlignment="Top"
                     Width="124"
                     Click="exitProfilePage" />
@@ -80,11 +94,62 @@
                          FontSize="20"
                          FontStyle="Italic"
                          FontWeight="Bold" />
+              <!-- Grid divided into 4 separate Grids-->
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition></ColumnDefinition>
+                  <ColumnDefinition Width="Auto"></ColumnDefinition>
+                  <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <!-- nested Grid on the Left.  It isn't subdivided further with a splitter-->
+                <Grid Grid.Column="0"
+                      VerticalAlignment="Stretch">
+                  <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                  </Grid.RowDefinitions>
+                  <Button Margin="3"
+                          Grid.Row="0">Weight Chart Here</Button>
+                  <Button Margin="3"
+                          Grid.Row="1">Exercise Chart Here</Button>
+                </Grid>
+
+                <!-- This is the vertical splitter that sits between the two nested (left and right) grids. -->
+                <GridSplitter Grid.Column="1"
+                              Width="3"
+                              HorizontalAlignment="Center"
+                              VerticalAlignment="Stretch"
+                              ShowsPreview="False"></GridSplitter>
+
+                <!--Nested Grid on the right. -->
+                <Grid Grid.Column="2">
+                  <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                  </Grid.RowDefinitions>
+
+                  <Button Grid.Row="0"
+                          Margin="3">Fat % Chart Here</Button>
+                  <Button Grid.Row="2"
+                          Margin="3">BMI/BMR Chart Here</Button>
+
+                  <!-- Horizontal Splitter that subdivides it into a top and bottom region-->
+                  <GridSplitter Grid.Row="1"
+                                Height="3"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Stretch"
+                                ShowsPreview="False"
+                                Margin="10,0,-0.333,25.667"
+                                Grid.RowSpan="2"></GridSplitter>
+                </Grid>
+              </Grid>
             </StackPanel>
           </Grid>
         </TabItem>
       </TabControl>
-      <Label Content="TrackFit"
+      <Label Content="Profile"
              HorizontalAlignment="Left"
              Margin="21,10,0,0"
              VerticalAlignment="Top"
@@ -94,15 +159,15 @@
              RenderTransformOrigin="-0.098,0.377"
              FontWeight="Bold"
              FontStyle="Italic" />
+      <Image HorizontalAlignment="Left"
+             Height="106"
+             Margin="21,82,0,0"
+             VerticalAlignment="Top"
+             Width="101"
+             RenderTransformOrigin="-0.14,-0.148"
+             Source="KiKi.jpg" />
 
       <!--Image -->
-      <Image HorizontalAlignment="Left"
-             Height="121"
-             Margin="162,81,0,0"
-             VerticalAlignment="Top"
-             Width="108"
-             Source="Images/ImaniBB.jpg" />
-
     </Grid>
   </Border>
 
