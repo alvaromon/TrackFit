@@ -31,5 +31,14 @@ namespace TrackFit_Project
             mainWindow.Content = new Main_Page();
         }
 
+        private void WeightChart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BMIChart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
