@@ -49,12 +49,12 @@ namespace TrackFit_Project
         
         private void CreateBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Great Job!!! Your Meal Plan was Created");
         }
 
         private void Checkbox_Checked(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Item Added");
+            MessageBox.Show("Meal Item Added");
         }
     }
 }
