@@ -30,17 +30,17 @@ namespace TrackFit_Project
             Window mainWindow = Application.Current.MainWindow;
             mainWindow.Content = new Main_Page();
         }
-        /*
+        
         private void WeightChart_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void BMIChart_Click(object sender, RoutedEventArgs e)
         {
 
         }
-        */
+       
         private void ResetBtn_Click(object sender, RoutedEventArgs e)
         {
             this.CheckBox1.IsChecked = this.CheckBox2.IsChecked = this.CheckBox3.IsChecked = this.CheckBox4.IsChecked = this.CheckBox5.IsChecked =
@@ -49,12 +49,12 @@ namespace TrackFit_Project
         
         private void CreateBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Great Job!!! Your Meal Plan was Created");
         }
 
         private void Checkbox_Checked(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Item Added");
+            MessageBox.Show("Meal Item Added");
         }
     }
 }
