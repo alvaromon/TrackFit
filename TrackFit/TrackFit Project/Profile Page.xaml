@@ -5,18 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:TrackFit_Project"
       mc:Ignorable="d"
-
-    
       WindowTitle="TrackFit"
-
-          MinHeight="453.635" MinWidth="855.207"
-     
-
+      MinHeight="453.635"
+      MinWidth="855.207"
       Title="Profile_Page"
       Foreground="#FFE5E5E5"
       Background="#FFE5E5E5"
       ShowsNavigationUI="false">
-      
+
   <Border Padding="15">
     <Grid>
 
@@ -25,8 +21,7 @@
         <TabItem Header="Exercise">
           <Grid Background="#FFE5E5E5">
             <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="20*" />
-              <ColumnDefinition Width="200*" />
+              <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Button Content="Exit Profile Settings"
                     HorizontalAlignment="Left"
@@ -34,15 +29,12 @@
                     VerticalAlignment="Top"
                     Width="124"
                     Click="exitProfilePage"
-                    Grid.ColumnSpan="2"
-                    Height="20">
-            </Button>
+                    Height="20" />
             <StackPanel HorizontalAlignment="Left"
                         Height="315"
-                        Margin="27,26,0,0"
+                        Margin="120,26,0,0"
                         VerticalAlignment="Top"
-                        Width="528"
-                        Grid.Column="1">
+                        Width="528">
               <TextBlock TextWrapping="Wrap"
                          Text="Exercise "
                          FontSize="20"
@@ -72,6 +64,97 @@
                          FontSize="20"
                          FontStyle="Italic"
                          FontWeight="Bold" />
+
+              <!--Meal Plan -->
+              <TextBlock Text="Add Meal Plan"
+                         Margin="0 25 0 2" />
+              <ComboBox Padding="2"
+                        Margin="0,0,283,0">
+                <ComboBoxItem>Meats</ComboBoxItem>
+                <ComboBoxItem>Vegetables</ComboBoxItem>
+                <ComboBoxItem>Starches</ComboBoxItem>
+                <ComboBoxItem>Carbohydrates</ComboBoxItem>
+
+              </ComboBox>
+
+              <!-- Meal Plan Info -->
+              <TextBlock Text="Meal Plan Info"
+                         FontWeight="Bold"
+                         Margin="150 35 50 10" />
+
+              <!-- Item Appearance -->
+              <TextBlock Text="Check Items to Appear in Nutrition Plan"
+                         Margin="0 0 0 5" />
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*" />
+                  <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Column 1 -->
+                <StackPanel Grid.Column="0"
+                            Margin="0 0 10 0">
+                  <CheckBox Checked="Checkbox_Checked"
+                            x:Name="CheckBox1"
+                            Content="Meal Item 1" />
+                  <CheckBox Checked="Checkbox_Checked"
+                            x:Name="CheckBox2"
+                            Content="Meal Item 2" />
+                  <CheckBox Checked="Checkbox_Checked"
+                            x:Name="CheckBox3"
+                            Content="Meal Item 3" />
+                  <CheckBox Checked="Checkbox_Checked"
+                            x:Name="CheckBox4"
+                            Content="Meal Item 4" />
+                </StackPanel>
+
+                <!-- Column 2 -->
+                <StackPanel Grid.Column="1"
+                            Margin="0 0 10 0">
+                  <CheckBox Checked="Checkbox_Checked"
+                            x:Name="CheckBox5"
+                            Content="Meal Item 5" />
+                  <CheckBox Checked="Checkbox_Checked"
+                            x:Name="CheckBox6"
+                            Content="Meal Item 6" />
+                  <CheckBox Checked="Checkbox_Checked"
+                            x:Name="CheckBox7"
+                            Content="Meal Item 7" />
+                  <CheckBox Checked="Checkbox_Checked"
+                            x:Name="CheckBox8"
+                            Content="Meal Item 8" />
+                </StackPanel>
+
+                <!--Menu Items Function Buttons-->
+                <Grid>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+
+                  <!-- Reset Tab-->
+                  <Button x:Name="ResetBtn"
+                          Click="ResetBtn_Click"
+                          Margin="5 75 10 25"
+                          Grid.Column="0"
+                          Content="Reset"
+                          FontWeight="Bold">
+                  </Button>
+
+                  <!-- Build Plan Items Tab-->
+                  <Button x:Name="CreateBtn"
+                          Click="CreateBtn_Click"
+                          Margin="0 75 25 25"
+                          Grid.Column="1"
+                          Content="Create Plan"
+                          FontWeight="Bold">
+                  </Button>
+                </Grid>
+
+              </Grid>
+
+              <!-- -->
+
             </StackPanel>
           </Grid>
         </TabItem>
@@ -109,7 +192,9 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                   </Grid.RowDefinitions>
-                  <Button Margin="3"
+                  <Button x:Name="WeightChart"
+                          Click="WeightChart_Click"
+                          Margin="3"
                           Grid.Row="0">Weight Chart Here</Button>
                   <Button Margin="3"
                           Grid.Row="1">Exercise Chart Here</Button>
@@ -132,7 +217,9 @@
 
                   <Button Grid.Row="0"
                           Margin="3">Fat % Chart Here</Button>
-                  <Button Grid.Row="2"
+                  <Button x:Name="BMIChart"
+                          Click="BMIChart_Click"
+                          Grid.Row="2"
                           Margin="3">BMI/BMR Chart Here</Button>
 
                   <!-- Horizontal Splitter that subdivides it into a top and bottom region-->
@@ -146,6 +233,12 @@
                 </Grid>
               </Grid>
             </StackPanel>
+            <Image x:Name="imageChart"
+                   HorizontalAlignment="Left"
+                   Height="183"
+                   Margin="251,135,0,0"
+                   VerticalAlignment="Top"
+                   Width="247" />
           </Grid>
         </TabItem>
       </TabControl>
