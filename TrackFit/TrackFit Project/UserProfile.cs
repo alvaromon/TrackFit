@@ -22,7 +22,6 @@ namespace TrackFit_Project
         private String _firstName;
         private String _lastName;
         private int _age;
-        private DateTime _birthday;
         private double _height;
         private double _weight;
         private ExerciseLevel _exerciseLevel;
@@ -156,7 +155,7 @@ namespace TrackFit_Project
             this._firstName = _xmlFile.SelectSingleNode(@"User/FirstName").InnerText.Trim();
             this._lastName = _xmlFile.SelectSingleNode(@"User/LastName").InnerText.Trim();
             this._age = Int32.Parse( _xmlFile.SelectSingleNode(@"User/Age").InnerText.Trim() );
-            this._height = Int32.Parse( _xmlFile.SelectSingleNode(@"User/HeightInches").InnerText.Trim() );
+            this._height = Int32.Parse( _xmlFile.SelectSingleNode(@"User/Height").InnerText.Trim() );
             this._weight = Int32.Parse( _xmlFile.SelectSingleNode(@"User/Weight").InnerText.Trim() );
             this._exerciseLevel= (ExerciseLevel) Int32.Parse( _xmlFile.SelectSingleNode(@"User/ExerciseLevel").InnerText.Trim() );
 
@@ -164,7 +163,7 @@ namespace TrackFit_Project
             {
                 this._exerciseGoal = ExerciseGoal.Weight_Loss;
             }
-            else if (_xmlFile.SelectSingleNode(@"User/ExerciseGoal").InnerText.Trim() == "Strength")
+            else if (_xmlFile.SelectSingleNode(@"User/ExerciseGoal").InnerText.Trim() == "Strength_Gain")
             {
                 this._exerciseGoal = ExerciseGoal.Strength;
             }

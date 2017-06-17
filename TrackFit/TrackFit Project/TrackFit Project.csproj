@@ -57,9 +57,16 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ApplicationServices.cs" />
+    <Compile Include="Create Account Page.xaml.cs">
+      <DependentUpon>Create Account Page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Exercise.cs" />
     <Compile Include="ExercisePlan.cs" />
     <Compile Include="UserProfile.cs" />
+    <Page Include="Create Account Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -40,7 +40,7 @@ namespace TrackFit_Project
             XmlDocument profileDoc = new XmlDocument();
             String userPassword = "";
             String path = System.IO.Path.Combine(Environment.CurrentDirectory, $@"User Profiles\{Username_Text_Box.Text}.xml");
-
+            ApplicationServices.User = new UserProfile(path);
             try
             {
                 profileDoc.Load(path);
@@ -80,6 +80,12 @@ namespace TrackFit_Project
             Login_Error.Visibility = Visibility.Visible;
             Username_Text_Box.Clear();
             Password_Text_Box.Clear();
+        }
+
+        private void Create_Account_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window mainWindow = Application.Current.MainWindow;
+            mainWindow.Content = new Create_Account_Page();
         }
     }
 }
