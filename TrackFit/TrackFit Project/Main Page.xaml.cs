@@ -29,6 +29,7 @@ namespace TrackFit_Project
             Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
             Exercise_tab_left_button.IsEnabled = false;
             Day_of_the_Week_Label.Content = _dayStrings[0];
+            Welcome_Banner.Content = $@"Welcome {ApplicationServices.User.FirstName}!";
 
         }
 
