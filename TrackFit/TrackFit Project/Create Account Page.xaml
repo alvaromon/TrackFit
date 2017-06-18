@@ -31,13 +31,14 @@
         <TextBox x:Name="Height_Text_Box" TextWrapping="Wrap" Height="23" Margin="104,306,689.2,124.6" Width="62"/>
         <TextBlock x:Name="Height_Label" Margin="52,306,759.2,131.6" TextWrapping="Wrap" Text="Height:" Height="16" Width="44"/>
         <TextBlock x:Name="Inches_text" Margin="52,321,765.2,116.6" TextWrapping="Wrap" Text="*in inches" Height="16" FontSize="8" FontFamily="Tahoma" Width="38"/>
-        <Button x:Name="Create_Account_Button" Content="Create" Height="20" Width="86" Margin="619,397,150.2,36.6" Click="Create_Button_Click"/>
-        <Button x:Name="Cancel_Create_Account_Button" Content="Cancel"  Height="20" Width="86" Margin="710,397,59.2,36.6" Click="Cancel_Button_Click"/>
+        <TextBox x:Name="Profile_Photo_Text_Box" TextWrapping="NoWrap" Height="23" Margin="103,343,633.2,87.6" Width="119" IsEnabled="False"/>
+        <TextBlock x:Name="Profile_Picture_Label" Margin="52,337,759.2,82.6" TextWrapping="Wrap" Text="Profile Picture:" Width="44" Height="34"/>
+        <Button x:Name="Browse_Button" Content="Browse" Margin="232,346,548.2,88.6" Height="19" Width="75" Click="Browse_Button_Click"/>
         <ComboBox x:Name="Exercise_Goal_Combo_Box" Padding="2" Margin="370,69,335.2,361.6" Height="23" Width="150" SelectedIndex="0">
             <ComboBoxItem Content="Exercise Goal"/>
             <ComboBoxItem Content="I want to lose weight!"/>
             <ComboBoxItem Content="I want to get strong!"/>
-            <ComboBoxItem Content="I want to get tone!"/>
+            <ComboBoxItem Content="I want to get toned!"/>
         </ComboBox>
         <ComboBox x:Name="Exercise_Level_Combo_Box" Padding="2" Margin="370,102,335.2,328.6" Height="23" Width="150" SelectedIndex="0">
             <ComboBoxItem Content="Exercise Level"/>
@@ -45,5 +46,7 @@
             <ComboBoxItem Content="Intermediate"/>
             <ComboBoxItem Content="Expert"/>
         </ComboBox>
+        <Button x:Name="Create_Account_Button" Content="Create" Height="20" Width="86" Margin="619,397,150.2,36.6" Click="Create_Button_Click"/>
+        <Button x:Name="Cancel_Create_Account_Button" Content="Cancel"  Height="20" Width="86" Margin="710,397,59.2,36.6" Click="Cancel_Button_Click"/>
     </Grid>
 </Page>
