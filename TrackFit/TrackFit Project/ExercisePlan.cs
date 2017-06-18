@@ -92,8 +92,18 @@ namespace TrackFit_Project
         {
             for (int i = 0; i < 7; i++)
             {
+                // All around work out
+                if (i == 0 || i == 1 || i == 3 || i == 4)
+                {
+                    _exercises[i, 0] = Pick(ApplicationServices.User.getUpperbodyExercises());
+                    _exercises[i, 1] = Pick(ApplicationServices.User.getUpperbodyExercises());
+                    _exercises[i, 2] = Pick(ApplicationServices.User.getLegExercises());
+                    _exercises[i, 3] = Pick(ApplicationServices.User.getLegExercises());
+                    _exercises[i, 4] = Pick(ApplicationServices.User.getCardioExercises());
+                    _exercises[i, 5] = Pick(ApplicationServices.User.getCoreExercises());
+                }
                 // Light day, usually wednesday
-                if (i == 2)
+                else if (i == 2)
                 {
                     _exercises[i, 0] = Pick(ApplicationServices.User.getCardioExercises());
                     _exercises[i, 1] = Pick(ApplicationServices.User.getCardioExercises());
@@ -101,14 +111,7 @@ namespace TrackFit_Project
                 else if (i == 5 || i == 6)
                 {
                     _exercises[i, 0] = Pick(ApplicationServices.User.getRest());
-                }
-
-                _exercises[i, 0] = Pick(ApplicationServices.User.getUpperbodyExercises());
-                _exercises[i, 1] = Pick(ApplicationServices.User.getUpperbodyExercises());
-                _exercises[i, 2] = Pick(ApplicationServices.User.getLegExercises());
-                _exercises[i, 3] = Pick(ApplicationServices.User.getLegExercises());
-                _exercises[i, 4] = Pick(ApplicationServices.User.getCardioExercises());
-                _exercises[i, 5] = Pick(ApplicationServices.User.getCoreExercises());
+                }               
             }
         }
 
