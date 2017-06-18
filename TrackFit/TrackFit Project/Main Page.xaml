@@ -20,8 +20,7 @@
                VerticalAlignment="Top">
             <Grid Background="#FFE5E5E5">
                 <Button x:Name="Exercise_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
-                    <Image>
-                        <Image.Source>stock profile image.png</Image.Source>
+                    <Image x:Name="Profile_Image_Exercise">
                     </Image>
                 </Button>
                 <Grid Margin="137,50,10,10">
@@ -42,8 +41,7 @@
              Width="64">
             <Grid Background="#FFE5E5E5">
                 <Button x:Name="Nutrition_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
-                    <Image>
-                        <Image.Source>stock profile image.png</Image.Source>
+                    <Image x:Name="Profile_Image_Nutrition">
                     </Image>
                 </Button>
                 <Grid Margin="137,50,10,10">
@@ -65,8 +63,7 @@
                     <ColumnDefinition Width="669*"/>
                 </Grid.ColumnDefinitions>
                 <Button x:Name="Statistics_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
-                    <Image>
-                        <Image.Source>stock profile image.png</Image.Source>
+                    <Image x:Name="Profile_Image_Statistics">
                     </Image>
                 </Button>
                 <Grid Margin="137,50,10,10" Grid.ColumnSpan="3">
