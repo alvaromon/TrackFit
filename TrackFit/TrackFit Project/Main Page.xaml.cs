@@ -30,7 +30,10 @@ namespace TrackFit_Project
             Exercise_tab_left_button.IsEnabled = false;
             Day_of_the_Week_Label.Content = _dayStrings[0];
             Welcome_Banner.Content = $@"Welcome {ApplicationServices.User.FirstName}!";
-
+            BitmapImage image = new BitmapImage(new Uri(Environment.CurrentDirectory + @"\Images\" + ApplicationServices.User.XMLFile.SelectSingleNode(@"User/ProfilePicture").InnerText.Trim(), UriKind.Absolute));
+            Profile_Image_Exercise.Source = image;
+            Profile_Image_Nutrition.Source = image;
+            Profile_Image_Statistics.Source = image;
         }
 
         private void profileButtonClick(object sender, RoutedEventArgs e)
@@ -64,6 +67,16 @@ namespace TrackFit_Project
                 Exercise_tab_left_button.IsEnabled = true;
                 Day_of_the_Week_Label.Content = _dayStrings[_day];
                 Exercise_Text_Block.Text = ApplicationServices.Plan.planToString(_day);
+            }
+        }
+
+        public Uri ProfileImage
+        {
+            get
+            {
+                BitmapImage image = new BitmapImage(new Uri(Environment.CurrentDirectory + @"\Images\" + ApplicationServices.User.XMLFile.SelectSingleNode(@"User/ProfilePicture").InnerText.Trim(), UriKind.Relative));
+
+                return image.UriSource;
             }
         }
 
