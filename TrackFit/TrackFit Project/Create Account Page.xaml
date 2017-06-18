@@ -14,7 +14,7 @@
     <Grid Background="#FFE5E5E5" >
         <TextBlock TextWrapping="Wrap" Text="Create a TrackFit Account" FontSize="20" FontStyle="Italic" FontWeight="Bold" Margin="10,10,535.2,416.6" FontFamily="Tahoma" Width="310" Height="27" />
         <TextBlock TextWrapping="Wrap" Text="Account Information:" FontSize="8" FontStyle="Italic" FontWeight="Bold" Margin="52,53,711.2,389.6" FontFamily="Tahoma" Width="92" Height="11" />
-        <TextBox x:Name="First_Name_Text_Box" TextWrapping="Wrap" Width="137" Height="23" Margin="126,69,592.2,361.6"/>
+        <TextBox x:Name="First_Name_Text_Box" TextWrapping="Wrap" Width="137" Height="23" Margin="126,69,592.2,361.6" BorderBrush="#FFB3ABAB"/>
         <TextBlock x:Name="First_Name_Label" Margin="52,72,741.2,365.6" TextWrapping="Wrap" Text="First Name:" Height="16" Width="62"/>
         <TextBox x:Name="Last_Name_Text_Box" TextWrapping="Wrap" Width="137" Height="23" Margin="126,102,592.2,328.6"/>
         <TextBlock x:Name="Last_Name_Label" Margin="52,105,741.2,332.6" TextWrapping="Wrap" Text="Last Name:" Height="16" Width="62"/>
@@ -48,5 +48,6 @@
         </ComboBox>
         <Button x:Name="Create_Account_Button" Content="Create" Height="20" Width="86" Margin="619,397,150.2,36.6" Click="Create_Button_Click"/>
         <Button x:Name="Cancel_Create_Account_Button" Content="Cancel"  Height="20" Width="86" Margin="710,397,59.2,36.6" Click="Cancel_Button_Click"/>
+        <TextBlock x:Name="Empty_Field_Warning_Text" TextWrapping="Wrap" Text="Please fill out all fields to create an account!" FontSize="8" FontWeight="Bold" Margin="619,370,59,62" FontFamily="Tahoma" FontStyle="Italic" Foreground="Red" Width="177" Height="22" Visibility="Hidden" />
     </Grid>
 </Page>
