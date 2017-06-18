@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,10 +53,11 @@ namespace TrackFit_Project
             this._path = path;
 
             this._xmlFile = new XmlDocument();
+
             this._xmlFile.Load(path);
 
             this._xmlExerciseFile = new XmlDocument();
-            this._xmlExerciseFile.Load(System.IO.Path.Combine(Environment.CurrentDirectory, $@"Exercises\{goalString()}.xml"));
+            this._xmlExerciseFile.Load(Path.Combine(Environment.CurrentDirectory, $@"Exercises\{goalString()}.xml"));
 
             readProfileInfo();
         }

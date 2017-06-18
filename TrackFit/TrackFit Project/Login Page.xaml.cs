@@ -40,9 +40,9 @@ namespace TrackFit_Project
             XmlDocument profileDoc = new XmlDocument();
             String userPassword = "";
             String path = System.IO.Path.Combine(Environment.CurrentDirectory, $@"User Profiles\{Username_Text_Box.Text}.xml");
-            ApplicationServices.User = new UserProfile(path);
             try
             {
+                ApplicationServices.User = new UserProfile(path);
                 profileDoc.Load(path);
                 userPassword = profileDoc.SelectSingleNode("User/Password").InnerText.Trim();
             }
