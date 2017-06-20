@@ -48,6 +48,54 @@ namespace TrackFit_Project
             }
         }
 
+        private void HighlightEmptyFields()
+        {
+            Empty_Field_Warning_Text.Visibility = Visibility.Visible;
+
+            Object[] Arr = new Object[7] 
+            {
+                Password_Text_Box,
+                Username_Text_Box,
+                First_Name_Text_Box,
+                Last_Name_Text_Box,
+                Age_Text_Box,
+                Weight_Text_Box,
+                Height_Text_Box,
+               
+            };
+
+            Object[] ComboBoxArr = new Object[2]
+            {
+                Exercise_Goal_Combo_Box,
+                Exercise_Level_Combo_Box
+            };
+
+            foreach (System.Windows.Controls.TextBox obj in Arr)
+            {
+                if (obj.Text == "")
+                {
+                    obj.BorderBrush = System.Windows.Media.Brushes.Red;
+                }
+                else
+                {
+                    obj.BorderBrush = System.Windows.Media.Brushes.LightGray;
+                }
+            }
+
+            foreach (System.Windows.Controls.ComboBox obj in ComboBoxArr)
+            {
+                if (obj.Text == "Exercise Goal" || obj.Text == "Exercise Level")
+                {
+                    obj.Foreground = System.Windows.Media.Brushes.Red;
+                }
+                else
+                {
+                    obj.Foreground = System.Windows.Media.Brushes.Black;
+                }
+            }
+
+        }
+
         private bool CheckInputs()
         {
             if (Password_Text_Box.Text != "" &&
@@ -64,6 +112,7 @@ namespace TrackFit_Project
             }
             else
             {
+                HighlightEmptyFields();
                 return false;
             }
         }
@@ -165,7 +214,7 @@ namespace TrackFit_Project
             Element.AppendChild(text);
             root.AppendChild(Element);
 
-            if (Profile_Photo_Text_Box.Text != null)
+            if (Profile_Photo_Text_Box.Text != "")
             {
                 Element = doc.CreateElement(string.Empty, "ProfilePicture", string.Empty);
                 text = doc.CreateTextNode($@"{Profile_Photo_Text_Box.Text}");
@@ -175,7 +224,7 @@ namespace TrackFit_Project
             else
             {
                 Element = doc.CreateElement(string.Empty, "ProfilePicture", string.Empty);
-                text = doc.CreateTextNode(@"\Images\stock profile image.jpg");
+                text = doc.CreateTextNode(@"stock profile image.jpg");
                 Element.AppendChild(text);
                 root.AppendChild(Element);
             }
