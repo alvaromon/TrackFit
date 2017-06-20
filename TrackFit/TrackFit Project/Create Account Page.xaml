@@ -24,7 +24,7 @@
         <TextBlock x:Name="Password_Label" Margin="52,171,734.2,266.6" TextWrapping="Wrap" Text="Password:" Height="16" Width="68"/>
         <TextBlock TextWrapping="Wrap" Text="Exercise Information:" FontSize="8" FontStyle="Italic" FontWeight="Bold" Margin="370,53,393.2,389.6" FontFamily="Tahoma" Width="92" Height="11" />
         <TextBlock TextWrapping="Wrap" Text="Personal Information:" FontSize="8" FontStyle="Italic" FontWeight="Bold" Margin="52,205,711.2,237.6" FontFamily="Tahoma" Width="92" Height="11" />
-        <TextBox x:Name="Age_Text_Box" TextWrapping="Wrap" Height="23" Margin="104,231,689.2,199.6" Width="62"/>
+        <TextBox x:Name="Age_Text_Box" TextWrapping="Wrap" Height="23" Margin="104,231,689.2,199.6" Width="62" />
         <TextBlock x:Name="Age_Label" Margin="52,231,776.2,206.6" TextWrapping="Wrap" Text="Age:" Height="16" Width="27"/>
         <TextBox x:Name="Weight_Text_Box" TextWrapping="Wrap" Height="23" Margin="104,269,689.2,161.6" Width="62"/>
         <TextBlock x:Name="Weight_Label" Margin="52,269,759.2,168.6" TextWrapping="Wrap" Text="Weight:" Height="16" Width="44"/>
