@@ -232,15 +232,12 @@
              RenderTransformOrigin="-0.098,0.377"
              FontWeight="Bold"
              FontStyle="Italic" />
-      <Image HorizontalAlignment="Left"
-             Height="106"
-             Margin="21,82,0,0"
-             VerticalAlignment="Top"
-             Width="101"
-             RenderTransformOrigin="-0.14,-0.148"
-             Source="KiKi.jpg" />
+    <Button x:Name="Profile_Page_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="0,2,0,0">
+        <Image x:Name="Profile_Page_Profile_Image">
+        </Image>
+    </Button>
 
-      <!--Image -->
+            <!--Image -->
     </Grid>
   </Border>
 

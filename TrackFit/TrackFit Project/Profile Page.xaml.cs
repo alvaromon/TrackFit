@@ -23,6 +23,8 @@ namespace TrackFit_Project
         public Profile_Page()
         {
             InitializeComponent();
+            BitmapImage image = new BitmapImage(new Uri(Environment.CurrentDirectory + @"\Images\" + ApplicationServices.User.XMLFile.SelectSingleNode(@"User/ProfilePicture").InnerText.Trim(), UriKind.Absolute));
+            Profile_Page_Profile_Image.Source = image;
         }
 
         private void exitProfilePage(object sender, RoutedEventArgs e)
