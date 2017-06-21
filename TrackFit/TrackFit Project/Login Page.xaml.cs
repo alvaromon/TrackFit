@@ -55,19 +55,33 @@ namespace TrackFit_Project
             if ( Password_Text_Box.Password == userPassword )
             {
                 ApplicationServices.User = new UserProfile(path);
+
+                DateTime startOfWeek = ApplicationServices.User.StartOfWeek;
                 
                 // Check if a plan has already been created, if not create a new one
-                if (ApplicationServices.User.PlanCreated)
+                if (!ApplicationServices.User.PlanCreated)
                 {
-                    // Load stored plan
+                    // Make the first plan; New user
+                    ApplicationServices.Plan = new ExercisePlan();
+                    Window mainWindow = Application.Current.MainWindow;
+                    mainWindow.Content = new Main_Page();
+                }
+                else if ((DateTime.Now - startOfWeek).Days >= 7 && ApplicationServices.User.PlanCreated)
+                {
+                    // Make new plan for the week
+                    ApplicationServices.Plan = new ExercisePlan();
+                    Window mainWindow = Application.Current.MainWindow;
+                    mainWindow.Content = new Main_Page();
                 }
                 else
                 {
-                    ApplicationServices.Plan = new ExercisePlan();
+                    // Load plan
+                    // Load function
+                    Window mainWindow = Application.Current.MainWindow;
+                    mainWindow.Content = new Main_Page();
                 }
 
-                Window mainWindow = Application.Current.MainWindow;
-                mainWindow.Content = new Main_Page();
+                
             }
             else
             {

@@ -41,6 +41,7 @@ namespace TrackFit_Project
 
                 // Create plan for new user
                 ApplicationServices.Plan = new ExercisePlan();
+                ApplicationServices.User.PlanCreated = true;
 
                 // Load up the Main Page
                 Window mainWindow = System.Windows.Application.Current.MainWindow;
@@ -188,6 +189,11 @@ namespace TrackFit_Project
                 Element.AppendChild(text);
                 root.AppendChild(Element);
             }
+
+            Element = doc.CreateElement(string.Empty, "StartOfWeek", string.Empty);
+            text = doc.CreateTextNode(DateTime.Now.ToLongDateString());
+            Element.AppendChild(text);
+            root.AppendChild(Element);
 
             Element = doc.CreateElement(string.Empty, "FirstName", string.Empty);
             text = doc.CreateTextNode($@"{First_Name_Text_Box.Text}");

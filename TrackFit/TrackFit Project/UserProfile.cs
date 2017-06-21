@@ -22,6 +22,7 @@ namespace TrackFit_Project
 
         private String _firstName;
         private String _lastName;
+        private String _username;
         private int _age;
         private double _height;
         private double _weight;
@@ -29,6 +30,7 @@ namespace TrackFit_Project
         private ExerciseGoal _exerciseGoal;
         private XmlDocument _xmlFile;
         private XmlDocument _xmlExerciseFile;
+        private DateTime _startOfWeek;
         private String _path;
         private bool _planCreated;
 
@@ -67,7 +69,7 @@ namespace TrackFit_Project
         #region Properties
 
         /// <summary>
-        /// Property used to get or set the user's first name
+        /// Property used to get or set the user's first name.
         /// </summary>
         public string FirstName
         {
@@ -79,6 +81,47 @@ namespace TrackFit_Project
             set
             {
                 _firstName = value;
+            }
+        }
+
+        /// <summary>
+        /// Property used to get or set the user's first name.
+        /// </summary>
+        public string Username
+        {
+            get
+            {
+                return _username;
+            }
+
+            set
+            {
+                _username = value;
+            }
+        }
+
+        /// <summary>
+        /// Property used to get or set the time the users most recent exercise plan was built.
+        /// </summary>
+        public DateTime StartOfWeek
+        {
+            get
+            {
+                return _startOfWeek;
+            }
+
+            set
+            {
+                _startOfWeek = value;
+
+                XmlElement Element = _xmlFile.CreateElement(string.Empty, "StartOfWeek", string.Empty);
+                XmlText text = _xmlFile.CreateTextNode(value.ToLongDateString());
+                Element.AppendChild(text);
+
+                _xmlFile.SelectSingleNode(@"User/StartOfWeek").InnerText = value.ToLongDateString();
+                _xmlFile.SelectSingleNode(@"User").ReplaceChild(Element, _xmlFile.SelectSingleNode(@"User/StartOfWeek"));
+
+                _xmlFile.Save(Environment.CurrentDirectory + $@"\User Profiles\{_username}.xml");
             }
         }
         public string LastName
@@ -141,7 +184,16 @@ namespace TrackFit_Project
             set
             {
                 _planCreated = value;
+
+                XmlElement Element = _xmlFile.CreateElement(string.Empty, "Plan", string.Empty);
+                XmlText text = _xmlFile.CreateTextNode(value.ToString());
+                Element.AppendChild(text);
+
                 _xmlFile.SelectSingleNode(@"User/Plan").InnerText = value.ToString();
+                _xmlFile.SelectSingleNode(@"User").ReplaceChild(Element, _xmlFile.SelectSingleNode(@"User/Plan"));
+
+
+                _xmlFile.Save(Environment.CurrentDirectory + $@"\User Profiles\{_username}.xml");
             }
         }
 
@@ -154,8 +206,10 @@ namespace TrackFit_Project
         /// </summary>
         private void readProfileInfo()
         {
+            this._startOfWeek = Convert.ToDateTime(_xmlFile.SelectSingleNode(@"User/StartOfWeek").InnerText);
             this._firstName = _xmlFile.SelectSingleNode(@"User/FirstName").InnerText.Trim();
             this._lastName = _xmlFile.SelectSingleNode(@"User/LastName").InnerText.Trim();
+            this._username = _xmlFile.SelectSingleNode(@"User/Username").InnerText.Trim();
             this._age = Int32.Parse( _xmlFile.SelectSingleNode(@"User/Age").InnerText.Trim() );
             this._height = Int32.Parse( _xmlFile.SelectSingleNode(@"User/Height").InnerText.Trim() );
             this._weight = Int32.Parse( _xmlFile.SelectSingleNode(@"User/Weight").InnerText.Trim() );

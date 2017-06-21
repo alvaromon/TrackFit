@@ -64,19 +64,22 @@ namespace TrackFit_Project
                 case ExerciseGoal.Strength:
                     buildStrengthPlan();
                     FindandReplaceDuplicated();
-                    _user.PlanCreated = true;
+                    ApplicationServices.User.StartOfWeek = DateTime.Now;
+                    ApplicationServices.User.PlanCreated = true;
                     break;
 
                 case ExerciseGoal.Tone:
                     buildTonePlan();
                     FindandReplaceDuplicated();
-                    _user.PlanCreated = true;
+                    ApplicationServices.User.StartOfWeek = DateTime.Now;
+                    ApplicationServices.User.PlanCreated = true;
                     break;
 
                 case ExerciseGoal.Weight_Loss:
                     buildWeightLossPlan();
                     FindandReplaceDuplicated();
-                    _user.PlanCreated = true;
+                    ApplicationServices.User.StartOfWeek = DateTime.Now;
+                    ApplicationServices.User.PlanCreated = true;
                     break;
 
                 default:
