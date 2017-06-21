@@ -1,10 +1,10 @@
 <User name="poo poo">
-  <Plan>False</Plan>
+  <Plan>True</Plan>
   <Username>poo</Username>
   <Password>poop</Password>
   <ExerciseGoal>Weight_Loss</ExerciseGoal>
   <ExerciseLevel>0</ExerciseLevel>
-  <StartOfWeek>Tuesday, June 20, 2017</StartOfWeek>
+  <StartOfWeek>Wednesday, June 21, 2017</StartOfWeek>
   <FirstName>poo</FirstName>
   <LastName>poo</LastName>
   <Height>99</Height>
