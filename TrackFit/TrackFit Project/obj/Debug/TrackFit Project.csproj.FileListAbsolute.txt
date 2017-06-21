@@ -53,3 +53,5 @@ C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\
 C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\TrackFit Project.pdb
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Create Account Page.g.cs
 C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Create Account Page.baml
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Create Account Page.g.cs
+C:\Users\lking\OneDrive\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\obj\Debug\Create Account Page.baml
