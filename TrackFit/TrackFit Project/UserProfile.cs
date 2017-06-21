@@ -29,6 +29,7 @@ namespace TrackFit_Project
         private ExerciseGoal _exerciseGoal;
         private XmlDocument _xmlFile;
         private XmlDocument _xmlExerciseFile;
+        private DateTime _startOfWeek;
         private String _path;
         private bool _planCreated;
 
@@ -79,6 +80,26 @@ namespace TrackFit_Project
             set
             {
                 _firstName = value;
+            }
+        }
+
+        public DateTime StartOfWeek
+        {
+            get
+            {
+                return _startOfWeek;
+            }
+
+            set
+            {
+                _startOfWeek = value;
+
+                XmlElement Element = _xmlFile.CreateElement(string.Empty, "StartOfWeek", string.Empty);
+                XmlText text = _xmlFile.CreateTextNode(value.ToLongDateString());
+                Element.AppendChild(text);
+
+                _xmlFile.SelectSingleNode(@"User/StartOfWeek").InnerText = value.ToLongDateString();
+                _xmlFile.SelectSingleNode(@"User").ReplaceChild(Element, _xmlFile.SelectSingleNode(@"User/StartOfWeek"));
             }
         }
         public string LastName
@@ -141,7 +162,13 @@ namespace TrackFit_Project
             set
             {
                 _planCreated = value;
+
+                XmlElement Element = _xmlFile.CreateElement(string.Empty, "Plan", string.Empty);
+                XmlText text = _xmlFile.CreateTextNode(value.ToString());
+                Element.AppendChild(text);
+
                 _xmlFile.SelectSingleNode(@"User/Plan").InnerText = value.ToString();
+                _xmlFile.SelectSingleNode(@"User").ReplaceChild(Element, _xmlFile.SelectSingleNode(@"User/Plan"));
             }
         }
 
@@ -154,6 +181,7 @@ namespace TrackFit_Project
         /// </summary>
         private void readProfileInfo()
         {
+            this._startOfWeek = Convert.ToDateTime(_xmlFile.SelectSingleNode(@"User/StartOfWeek").InnerText);
             this._firstName = _xmlFile.SelectSingleNode(@"User/FirstName").InnerText.Trim();
             this._lastName = _xmlFile.SelectSingleNode(@"User/LastName").InnerText.Trim();
             this._age = Int32.Parse( _xmlFile.SelectSingleNode(@"User/Age").InnerText.Trim() );
