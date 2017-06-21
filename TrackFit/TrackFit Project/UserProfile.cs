@@ -192,6 +192,7 @@ namespace TrackFit_Project
                 _xmlFile.SelectSingleNode(@"User/Plan").InnerText = value.ToString();
                 _xmlFile.SelectSingleNode(@"User").ReplaceChild(Element, _xmlFile.SelectSingleNode(@"User/Plan"));
 
+
                 _xmlFile.Save(Environment.CurrentDirectory + $@"\User Profiles\{_username}.xml");
             }
         }
