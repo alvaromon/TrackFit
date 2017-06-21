@@ -76,7 +76,9 @@ namespace TrackFit_Project
                 else
                 {
                     // Load plan
-                    // Load function
+                    // Load function goes here where created
+
+                    ApplicationServices.Plan = new ExercisePlan();
                     Window mainWindow = Application.Current.MainWindow;
                     mainWindow.Content = new Main_Page();
                 }

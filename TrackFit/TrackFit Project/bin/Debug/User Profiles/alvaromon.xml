@@ -1,7 +1,5 @@
-<User name = "Alvaro Montoya">
-  <Plan>
-    False
-  </Plan>
+<User name="Alvaro Montoya">
+  <Plan>True</Plan>
   <Username>
     alvaromon
   </Username>
@@ -14,9 +12,7 @@
   <ExerciseLevel>
     1
   </ExerciseLevel>
-  <StartOfWeek>
-    Tuesday, June 20, 2017
-  </StartOfWeek>
+  <StartOfWeek>Wednesday, June 21, 2017</StartOfWeek>
   <FirstName>
     Alvaro
   </FirstName>
