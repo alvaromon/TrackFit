@@ -32,7 +32,7 @@
                     Height="20" />
             <StackPanel HorizontalAlignment="Left"
                         Height="315"
-                        Margin="120,26,0,0"
+                        Margin="50,26,0,0"
                         VerticalAlignment="Top"
                         Width="528">
               <TextBlock TextWrapping="Wrap"
@@ -40,25 +40,59 @@
                          FontSize="20"
                          FontStyle="Italic"
                          FontWeight="Bold" />
+              <TextBlock Height="23"
+                         TextWrapping="Wrap"
+                         Text="Update Your Exercise Plan"
+                         FontSize="12"
+                         FontStyle="Italic"
+                         FontWeight="Medium"
+                         Margin="0 25 0 2" />
+              <Label Content="Current Exercise Goal"
+                     Margin="0 10 0 2" />
+              <TextBox x:Name="ExecPlanTxtBx"
+                       HorizontalAlignment="Left"
+                       Height="23"
+                       Margin="0,2,0,0"
+                       TextWrapping="Wrap"
+                       Text="Tone"
+                       VerticalAlignment="Top"
+                       Width="94" />
+              <Label Content="Change Exercise Goal"
+                     Margin="0 10 0 5"
+                     FontWeight="Medium" />
+              <ComboBox>
+                <ComboBoxItem>Get Tone</ComboBoxItem>
+                <ComboBoxItem>Lose Weight</ComboBoxItem>
+                <ComboBoxItem>Get Strong</ComboBoxItem>
+              </ComboBox>
+
             </StackPanel>
+
           </Grid>
         </TabItem>
         <TabItem Header="Nutrition"
                  HorizontalAlignment="Left"
-                 Width="64">
+                 Width="64"
+                 Margin="-2,-2,0,0">
           <Grid Background="#FFE5E5E5">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="23*" />
+              <ColumnDefinition Width="647*" />
+            </Grid.ColumnDefinitions>
             <Button Content="Exit Profile Settings"
                     HorizontalAlignment="Left"
                     Margin="20,342,0,0"
                     VerticalAlignment="Top"
                     Width="124"
-                    Click="exitProfilePage">
+                    Click="exitProfilePage"
+                    Grid.ColumnSpan="2">
             </Button>
             <StackPanel HorizontalAlignment="Left"
                         Height="315"
-                        Margin="120,26,0,0"
+                        Margin="27.272,26,0,0"
                         VerticalAlignment="Top"
-                        Width="528">
+                        Width="528"
+                        Grid.Column="1">
               <TextBlock TextWrapping="Wrap"
                          Text="Nutrition "
                          FontSize="20"
@@ -70,11 +104,11 @@
                          Margin="0 25 0 2" />
               <ComboBox Padding="2"
                         Margin="0,0,283,0">
-                <ComboBoxItem>Meats</ComboBoxItem>
-                <ComboBoxItem>Vegetables</ComboBoxItem>
-                <ComboBoxItem>Starches</ComboBoxItem>
-                <ComboBoxItem>Carbohydrates</ComboBoxItem>
-
+                <ComboBoxItem>Week 1 Meals</ComboBoxItem>
+                <ComboBoxItem>Week 2 Meals</ComboBoxItem>
+                <ComboBoxItem>Week 3 Meals</ComboBoxItem>
+                <ComboBoxItem>Week 4 Meals</ComboBoxItem>
+                <ComboBoxItem>User Input</ComboBoxItem>
               </ComboBox>
 
               <!-- Meal Plan Info -->
@@ -96,16 +130,16 @@
                             Margin="0 0 10 0">
                   <CheckBox Checked="Checkbox_Checked"
                             x:Name="CheckBox1"
-                            Content="Meal Item 1" />
+                            Content="Fish" />
                   <CheckBox Checked="Checkbox_Checked"
                             x:Name="CheckBox2"
-                            Content="Meal Item 2" />
+                            Content="Chicken" />
                   <CheckBox Checked="Checkbox_Checked"
                             x:Name="CheckBox3"
-                            Content="Meal Item 3" />
+                            Content="Steak" />
                   <CheckBox Checked="Checkbox_Checked"
                             x:Name="CheckBox4"
-                            Content="Meal Item 4" />
+                            Content="Lamb Chops" />
                 </StackPanel>
 
                 <!-- Column 2 -->
@@ -113,16 +147,16 @@
                             Margin="0 0 10 0">
                   <CheckBox Checked="Checkbox_Checked"
                             x:Name="CheckBox5"
-                            Content="Meal Item 5" />
+                            Content="Mix Vegetables" />
                   <CheckBox Checked="Checkbox_Checked"
                             x:Name="CheckBox6"
-                            Content="Meal Item 6" />
+                            Content="Potatoes" />
                   <CheckBox Checked="Checkbox_Checked"
                             x:Name="CheckBox7"
-                            Content="Meal Item 7" />
+                            Content="Corn" />
                   <CheckBox Checked="Checkbox_Checked"
                             x:Name="CheckBox8"
-                            Content="Meal Item 8" />
+                            Content="Salad" />
                 </StackPanel>
 
                 <!--Menu Items Function Buttons-->
@@ -158,7 +192,7 @@
             </StackPanel>
           </Grid>
         </TabItem>
-        <TabItem Header="Statistics"
+        <TabItem Header="Personal Info"
                  Margin="-2,-2,-2,0">
           <Grid Background="#FFE5E5E5">
             <Button Content="Exit Profile Settings"
@@ -169,69 +203,15 @@
                     Click="exitProfilePage" />
             <StackPanel HorizontalAlignment="Left"
                         Height="315"
-                        Margin="120,26,0,0"
+                        Margin="50,26,0,0"
                         VerticalAlignment="Top"
                         Width="528">
               <TextBlock TextWrapping="Wrap"
-                         Text="Statistics "
+                         Text="Personal Information"
                          FontSize="20"
                          FontStyle="Italic"
                          FontWeight="Bold" />
-              <!-- Grid divided into 4 separate Grids-->
-              <Grid>
-                <Grid.ColumnDefinitions>
-                  <ColumnDefinition></ColumnDefinition>
-                  <ColumnDefinition Width="Auto"></ColumnDefinition>
-                  <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
 
-                <!-- nested Grid on the Left.  It isn't subdivided further with a splitter-->
-                <Grid Grid.Column="0"
-                      VerticalAlignment="Stretch">
-                  <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                  </Grid.RowDefinitions>
-                  <Button x:Name="WeightChart"
-                          Click="WeightChart_Click"
-                          Margin="3"
-                          Grid.Row="0">Weight Chart Here</Button>
-                  <Button Margin="3"
-                          Grid.Row="1">Exercise Chart Here</Button>
-                </Grid>
-
-                <!-- This is the vertical splitter that sits between the two nested (left and right) grids. -->
-                <GridSplitter Grid.Column="1"
-                              Width="3"
-                              HorizontalAlignment="Center"
-                              VerticalAlignment="Stretch"
-                              ShowsPreview="False"></GridSplitter>
-
-                <!--Nested Grid on the right. -->
-                <Grid Grid.Column="2">
-                  <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                  </Grid.RowDefinitions>
-
-                  <Button Grid.Row="0"
-                          Margin="3">Fat % Chart Here</Button>
-                  <Button x:Name="BMIChart"
-                          Click="BMIChart_Click"
-                          Grid.Row="2"
-                          Margin="3">BMI/BMR Chart Here</Button>
-
-                  <!-- Horizontal Splitter that subdivides it into a top and bottom region-->
-                  <GridSplitter Grid.Row="1"
-                                Height="3"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Stretch"
-                                ShowsPreview="False"
-                                Margin="10,0,-0.333,25.667"
-                                Grid.RowSpan="2"></GridSplitter>
-                </Grid>
-              </Grid>
             </StackPanel>
             <Image x:Name="imageChart"
                    HorizontalAlignment="Left"

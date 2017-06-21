@@ -19,7 +19,8 @@
                Margin="-2,-2,0,0"
                VerticalAlignment="Top">
             <Grid Background="#FFE5E5E5">
-                <Button x:Name="Exercise_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick">
+                <Button x:Name="Exercise_Tab_Profile_Button" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Click="profileButtonClick"
+                Margin="0,2,0,0">
                     <Image x:Name="Profile_Image_Exercise">
                     </Image>
                 </Button>
@@ -29,9 +30,13 @@
                     <Button x:Name="Exercise_tab_left_button" Content="&lt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="50" FontSize="18" FontWeight="Bold" Click="Exercise_tab_left_button_Click"/>
                     <Button x:Name="Exercise_tab_Right_button" Content="&gt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Right" Width="20" Height="50" FontSize="18" FontWeight="Bold" Click="Exercise_tab_Right_button_Click"/>
                     <Label x:Name="Day_of_the_Week_Label" Content="Label" HorizontalAlignment="Left" Margin="297,10,0,0" VerticalAlignment="Top" Height="40" Width="167" FontFamily="Tahoma" FontSize="24" FontWeight="Bold"/>
-                    <Label x:Name="Welcome_Banner" Content="Label" HorizontalAlignment="Left" Margin="-138,52,0,0" VerticalAlignment="Top" Height="21" Width="81" FontFamily="Tahoma" FontSize="8" FontWeight="Bold"/>
+                    <Label x:Name="Welcome_Banner" Content="Label" HorizontalAlignment="Left"
+                 Margin="-138,56,0,0"
+                 VerticalAlignment="Top" Height="21" Width="81" FontFamily="Tahoma" FontSize="8" FontWeight="Bold"/>
                 </Grid>
-                <TextBlock x:Name="Log_Out_Text_Block" HorizontalAlignment="Left" Margin="4,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
+                <TextBlock x:Name="Log_Out_Text_Block" HorizontalAlignment="Left"
+                   Margin="4,127,0,0"
+                   TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
                         <Hyperlink x:Name="Log_out_hyperlink" Click="Log_out_hyperlink_Click">Log out</Hyperlink>
                 </TextBlock>
             </Grid>
@@ -68,11 +73,77 @@
                 </Button>
                 <Grid Margin="137,50,10,10" Grid.ColumnSpan="3">
                     <Rectangle x:Name="Statistics_tab_rectangle" Fill="#FFCFC6C6" Stroke="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                    <TextBlock HorizontalAlignment="Stretch" Height="234" Margin="32,37" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Stretch" />
-                    <Button x:Name="Statistics_tab_left_button" Content="&lt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
+          <StackPanel HorizontalAlignment="Left"
+                      Height="315"
+                      Margin="120,26,0,0"
+                      VerticalAlignment="Top"
+                      Width="528">
+            <TextBlock TextWrapping="Wrap"
+                       Text="Statistics "
+                       FontSize="20"
+                       FontStyle="Italic"
+                       FontWeight="Bold" />
+            <!-- Grid divided into 4 separate Grids-->
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+
+              <!-- nested Grid on the Left.  It isn't subdivided further with a splitter-->
+              <Grid Grid.Column="0"
+                    VerticalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button x:Name="WeightChart"
+                        Margin="3"
+                        Grid.Row="0">Weight Chart Here</Button>
+                <Button Margin="3"
+                        Grid.Row="1">Exercise Chart Here</Button>
+              </Grid>
+
+              <!-- This is the vertical splitter that sits between the two nested (left and right) grids. -->
+              <GridSplitter Grid.Column="1"
+                            Width="3"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Stretch"
+                            ShowsPreview="False"></GridSplitter>
+
+              <!--Nested Grid on the right. -->
+              <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                  <RowDefinition></RowDefinition>
+                  <RowDefinition Height="Auto"></RowDefinition>
+                  <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0"
+                        Margin="3">Fat % Chart Here</Button>
+                <Button x:Name="BMIChart"                        
+                        Grid.Row="2"
+                        Margin="3">BMI/BMR Chart Here</Button>
+
+                <!-- Horizontal Splitter that subdivides it into a top and bottom region-->
+                <GridSplitter Grid.Row="1"
+                              Height="3"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Stretch"
+                              ShowsPreview="False"
+                              Margin="10,0,-0.333,25.667"
+                              Grid.RowSpan="2"></GridSplitter>
+              </Grid>
+            </Grid>
+          </StackPanel>
+          <Button x:Name="Statistics_tab_left_button" Content="&lt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Left" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
                     <Button x:Name="Statistics_tab_Right_button" Content="&gt;" Margin="11" VerticalAlignment="Center" HorizontalAlignment="Right" Width="20" Height="50" FontSize="18" FontWeight="Bold"/>
                 </Grid>
-                <TextBlock x:Name="Log_Out_Text_Block_Statistics" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
+              
+              
+              
+              <TextBlock x:Name="Log_Out_Text_Block_Statistics" HorizontalAlignment="Left" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold">
                         <Hyperlink x:Name="Log_out_hyperlink_Statistics" Click="Log_out_hyperlink_Click">Log out</Hyperlink>
                 </TextBlock>
             </Grid>
