@@ -49,5 +49,6 @@
         <Button x:Name="Create_Account_Button" Content="Create" Height="20" Width="86" Margin="619,397,150.2,36.6" Click="Create_Button_Click"/>
         <Button x:Name="Cancel_Create_Account_Button" Content="Cancel"  Height="20" Width="86" Margin="710,397,59.2,36.6" Click="Cancel_Button_Click"/>
         <TextBlock x:Name="Empty_Field_Warning_Text" TextWrapping="Wrap" Text="Please fill out all fields to create an account!" FontSize="8" FontWeight="Bold" Margin="619,370,59,62" FontFamily="Tahoma" FontStyle="Italic" Foreground="Red" Width="177" Height="22" Visibility="Hidden" />
+        <TextBlock x:Name="Username_Already_Exists" TextWrapping="Wrap" Text="Username already exists! Please choose another." FontSize="8" FontWeight="Bold" Margin="268,132,495,293" FontFamily="Tahoma" Width="92" Height="29" Foreground="Red" Visibility="Hidden" />
     </Grid>
 </Page>

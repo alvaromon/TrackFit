@@ -30,10 +30,21 @@ namespace TrackFit_Project
             Exercise_tab_left_button.IsEnabled = false;
             Day_of_the_Week_Label.Content = _dayStrings[0];
             Welcome_Banner.Content = $@"Welcome {ApplicationServices.User.FirstName}!";
-            BitmapImage image = new BitmapImage(new Uri(Environment.CurrentDirectory + @"\Images\" + ApplicationServices.User.XMLFile.SelectSingleNode(@"User/ProfilePicture").InnerText.Trim(), UriKind.Absolute));
-            Profile_Image_Exercise.Source = image;
-            Profile_Image_Nutrition.Source = image;
-            Profile_Image_Statistics.Source = image;
+
+            try
+            {
+                BitmapImage image = new BitmapImage(new Uri(Environment.CurrentDirectory + @"\Images\" + ApplicationServices.User.XMLFile.SelectSingleNode(@"User/ProfilePicture").InnerText.Trim(), UriKind.Absolute));
+                Profile_Image_Exercise.Source = image;
+                Profile_Image_Nutrition.Source = image;
+                Profile_Image_Statistics.Source = image;
+            }
+            catch (System.IO.FileNotFoundException)
+            {
+                BitmapImage image = new BitmapImage(new Uri(Environment.CurrentDirectory + @"\Images\stock profile image.jpg", UriKind.Absolute));
+                Profile_Image_Exercise.Source = image;
+                Profile_Image_Nutrition.Source = image;
+                Profile_Image_Statistics.Source = image;
+            }
         }
 
         private void profileButtonClick(object sender, RoutedEventArgs e)

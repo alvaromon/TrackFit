@@ -15,7 +15,7 @@
     1
   </ExerciseLevel>
   <StartOfWeek>
-    Tuesday, June 20, 2017
+    Tuesday, June 6, 2017
   </StartOfWeek>
   <FirstName>
     Louis
@@ -29,6 +29,32 @@
   <Age>
     26
   </Age>
+  <ExercisePlan>
+    <Workout name="Push Ups" target="upperbody" status="accepted" />
+    <Workout name="Tricep Extensions" target="upperbody" status="accepted" />
+    <Workout name="Wind Sprints" target="cardio" status="accepted" />
+    <Workout name="Burpees" target="cardio" status="accepted" />
+    <Workout name="Shuffle Sprints" target="cardio" status="accepted" />
+    <Workout name="Hip Bridge" target="legs" status="accepted" />
+    <Workout name="Jump Squats" target="legs" status="accepted" />
+    <Workout name="Wind Sprints" target="cardio" status="accepted" />
+    <Workout name="Shuffle Sprints" target="cardio" status="accepted" />
+    <Workout name="Burpees" target="cardio" status="accepted" />
+    <Workout name="Shuffle Sprints" target="cardio" status="accepted" />
+    <Workout name="3 One-minute sprints" target="cardio" status="accepted" />
+    <Workout name="Tricep Extensions" target="upperbody" status="accepted" />
+    <Workout name="Farmer Carry" target="upperbody" status="accepted" />
+    <Workout name="Burpees" target="cardio" status="accepted" />
+    <Workout name="3 One-minute sprints" target="cardio" status="accepted" />
+    <Workout name="Shuffle Sprints" target="cardio" status="accepted" />
+    <Workout name="Hip Bridge" target="legs" status="accepted" />
+    <Workout name="Body Weight Squats" target="legs" status="accepted" />
+    <Workout name="3 One-minute sprints" target="cardio" status="accepted" />
+    <Workout name="1 mile run" target="cardio" status="accepted" />
+    <Workout name="Wind Sprints" target="cardio" status="accepted" />
+    <Workout name="Rest Day" target="rest" status="accepted" />
+    <Workout name="Rest Day" target="rest" status="accepted" />
+  </ExercisePlan>
   <Weight>
     180
   </Weight>
