@@ -22,33 +22,55 @@ namespace TrackFit_Project
             InitializeComponent();
         }
 
+        /// <summary>
+        /// User clicked cancel on the create account page, login page will be displayed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Cancel_Button_Click(object sender, RoutedEventArgs e)
         {
             Window mainWindow = System.Windows.Application.Current.MainWindow;
             mainWindow.Content = new Login_Page();
         }
 
+        /// <summary>
+        /// This is the captured event for the Create button. This is the beginning of an profile XML being created.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Create_Button_Click(object sender, RoutedEventArgs e)
         {
             if ( CheckInputs() )
             {
-                // Create profile XML
-                CreateProfileXML();
+                // Build path string and create and set TrackFit user account if user name not already taken
+                if (!File.Exists(Environment.CurrentDirectory + $@"\User Profiles\{Username_Text_Box.Text}.xml"))
+                {
+                    // Create profile XML
+                    CreateProfileXML();
 
-                // Build path string and create and set TrackFit user account
-                String path = Path.Combine(Environment.CurrentDirectory, $@"User Profiles\{Username_Text_Box.Text}.xml");
-                ApplicationServices.User = new UserProfile(path);
+                    // create path string to new user profile xml and create new user obj
+                    String path = Path.Combine(Environment.CurrentDirectory, $@"User Profiles\{Username_Text_Box.Text}.xml");
+                    ApplicationServices.User = new UserProfile(path);
 
-                // Create plan for new user
-                ApplicationServices.Plan = new ExercisePlan();
-                ApplicationServices.User.PlanCreated = true;
+                    // Create plan for new user
+                    ApplicationServices.Plan = new ExercisePlan();
+                    ApplicationServices.User.PlanCreated = true;
 
-                // Load up the Main Page
-                Window mainWindow = System.Windows.Application.Current.MainWindow;
-                mainWindow.Content = new Main_Page();
+                    // Load up the Main Page
+                    Window mainWindow = System.Windows.Application.Current.MainWindow;
+                    mainWindow.Content = new Main_Page();
+                }
+                else
+                {
+                    Username_Already_Exists.Visibility = Visibility.Visible;
+                    Username_Text_Box.BorderBrush = System.Windows.Media.Brushes.Red;
+                }
             }
         }
 
+        /// <summary>
+        /// Highlights empty fields in red and nonempty ones back to light gray
+        /// </summary>
         private void HighlightEmptyFields()
         {
             Empty_Field_Warning_Text.Visibility = Visibility.Visible;
@@ -97,6 +119,10 @@ namespace TrackFit_Project
 
         }
 
+        /// <summary>
+        /// This checks all the Create Account Page Controls to see if they have been filled out
+        /// </summary>
+        /// <returns>True or False depending on user imput validity</returns>
         private bool CheckInputs()
         {
             if (Password_Text_Box.Text != "" &&
@@ -218,6 +244,10 @@ namespace TrackFit_Project
             Element = doc.CreateElement(string.Empty, "Age", string.Empty);
             text = doc.CreateTextNode($@"{Age_Text_Box.Text}");
             Element.AppendChild(text);
+            root.AppendChild(Element);
+
+            // creates empty ExercisePlan Node to be filled in later by BuildPlan()
+            Element = doc.CreateElement(string.Empty, "ExercisePlan", string.Empty);
             root.AppendChild(Element);
 
             if (Profile_Photo_Text_Box.Text != "")

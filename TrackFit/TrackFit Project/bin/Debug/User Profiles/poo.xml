@@ -1,30 +1,15 @@
-<User name="Alvaro Montoya">
+<User name="poop poop">
   <Plan>True</Plan>
-  <Username>
-    alvaromon
-  </Username>
-  <Password>
-    Oneshot1!
-  </Password>
-  <ExerciseGoal>
-    Weight_Loss
-  </ExerciseGoal>
-  <ExerciseLevel>
-    1
-  </ExerciseLevel>
+  <Username>poo</Username>
+  <Password>poop</Password>
+  <ExerciseGoal>Weight_Loss</ExerciseGoal>
+  <ExerciseLevel>0</ExerciseLevel>
   <StartOfWeek>Saturday, June 24, 2017</StartOfWeek>
-  <FirstName>
-    Alvaro
-  </FirstName>
-  <LastName>
-    Montoya
-  </LastName>
-  <Height>
-    70
-  </Height>
-  <Age>
-    26
-  </Age>
+  <FirstName>poop</FirstName>
+  <LastName>poop</LastName>
+  <Height>99</Height>
+  <Weight>99</Weight>
+  <Age>99</Age>
   <ExercisePlan>
     <Workout name="Push Ups" target="upperbody" status="accepted" />
     <Workout name="Tricep Extensions" target="upperbody" status="accepted" />
@@ -51,10 +36,5 @@
     <Workout name="Rest Day" target="rest" status="accepted" />
     <Workout name="Rest Day" target="rest" status="accepted" />
   </ExercisePlan>
-  <Weight>
-    180
-  </Weight>
-  <ProfilePicture>
-    Zelda.jpg
-  </ProfilePicture>
+  <ProfilePicture>stock profile image.jpg</ProfilePicture>
 </User>

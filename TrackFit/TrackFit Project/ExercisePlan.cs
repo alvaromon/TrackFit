@@ -16,9 +16,9 @@ namespace TrackFit_Project
         /// <summary>
         /// This is the double array that contians all exercises for the week. 7 columns, one for each day of the week.
         /// </summary>
-        public XmlNode[,] _exercises = new XmlNode[7, 6];
-        public const String _path = @"C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\Exercises.xml";
-        public UserProfile _user = ApplicationServices.User;
+        private XmlNode[,] _exercises = new XmlNode[7, 6];
+        private const String _path = @"C:\Users\alvaro\Documents\GitHub\TrackFit\TrackFit\TrackFit Project\bin\Debug\Exercises.xml";
+        private UserProfile _user = ApplicationServices.User;
         private static Random rando = new Random();
 
         #endregion
@@ -30,7 +30,14 @@ namespace TrackFit_Project
         /// </summary>
         public ExercisePlan()
         {
-            buildPlan();
+            if (ApplicationServices.User.PlanCreated && !((DateTime.Now - ApplicationServices.User.StartOfWeek).Days >= 7))
+            {
+                LoadPlan();
+            }
+            else
+            {
+                buildPlan();
+            }
         }
 
         #endregion
@@ -66,6 +73,7 @@ namespace TrackFit_Project
                     FindandReplaceDuplicated();
                     ApplicationServices.User.StartOfWeek = DateTime.Now;
                     ApplicationServices.User.PlanCreated = true;
+                    WritePlan();
                     break;
 
                 case ExerciseGoal.Tone:
@@ -73,6 +81,7 @@ namespace TrackFit_Project
                     FindandReplaceDuplicated();
                     ApplicationServices.User.StartOfWeek = DateTime.Now;
                     ApplicationServices.User.PlanCreated = true;
+                    WritePlan();
                     break;
 
                 case ExerciseGoal.Weight_Loss:
@@ -80,6 +89,7 @@ namespace TrackFit_Project
                     FindandReplaceDuplicated();
                     ApplicationServices.User.StartOfWeek = DateTime.Now;
                     ApplicationServices.User.PlanCreated = true;
+                    WritePlan();
                     break;
 
                 default:
@@ -425,6 +435,78 @@ namespace TrackFit_Project
                 }
             }
             return planStr;
+        }
+
+        /// <summary>
+        /// This function will load a plan from the user's profile XML
+        /// </summary>
+        public void LoadPlan()
+        {
+            XmlDocument doc = ApplicationServices.User.XMLFile;
+            XmlNodeList list = doc.GetElementsByTagName("Workout");
+            int nodeNum = 0;
+
+            for (int i = 0; i < 7; i++)
+            {
+                if (i == 0 || i == 1 || i == 3 || i == 4)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        _exercises[i, j] = list.Item(nodeNum++);
+                    }
+                }
+                else if (i == 2)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        _exercises[i, j] = list.Item(nodeNum++);
+                    }
+                }
+                else
+                {
+                    _exercises[i, 0] = list.Item(nodeNum++);
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// This function will write the newest built plan to the user's profile XML
+        /// </summary>
+        public void WritePlan()
+        {
+            XmlDocument doc = ApplicationServices.User.XMLFile;
+            XmlNode ParentNode = doc.CreateElement(string.Empty, "ExercisePlan", string.Empty);
+
+            for (int i = 0; i < 7; i++)
+            {
+                if (i == 0 || i == 1 || i == 3 || i == 4)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        XmlNode importNode = doc.ImportNode(_exercises[i, j], false);
+                        ParentNode.AppendChild(importNode);
+                    }
+                }
+                else if (i == 2)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        XmlNode importNode = doc.ImportNode(_exercises[i, j], false);
+                        ParentNode.AppendChild(importNode);
+                    }
+                }
+                else
+                {
+                    XmlNode importNode = doc.ImportNode(_exercises[i, 0], false);
+                    ParentNode.AppendChild(importNode);
+                }
+
+            }
+
+            doc.SelectSingleNode(@"User").ReplaceChild(ParentNode, doc.SelectSingleNode(@"User/ExercisePlan"));
+            doc.Save(Environment.CurrentDirectory + $@"\User Profiles\{ApplicationServices.User.Username}.xml");
+           
         }
 
         #endregion
